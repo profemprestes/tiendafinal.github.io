@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Heros from '@components/Heros.astro';
+import Heros from '../components/Heros.astro';
 import Nuestrahistoria from '../components/nuestrahistoria.astro';
 import Equipos from '../components/equipos.astro';
 import Valores from '../components/Valores.astro';
@@ -42,30 +42,6 @@ import Llamadacto from '../components/Llamadacto.astro';
   </main>
 </Layout>
 
-<style>
-  /* Smooth scroll behavior */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Section transitions */
-  section {
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  /* Add animation for sections when they come into view */
-  @media (prefers-reduced-motion: no-preference) {
-    .fade-in {
-      animation: fadeIn 1s ease-in-out forwards;
-      opacity: 0;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  }
-</style>
 
 <script>
   // Add intersection observer to animate sections when they come into view

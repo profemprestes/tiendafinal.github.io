@@ -8,6 +8,10 @@ export default defineConfig({
     tailwind(), 
     react()
   ],
-  site: 'https://profemprestes.github.io/tiendafinal',
-  base: '/tiendafinal',
+  site: 'https://profemprestes.github.io/tiendafinal.github.io',
+  base: '/',
+  build: {
+    assets: '/assets',
+    format: 'file'
+  }
 });

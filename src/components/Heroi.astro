@@ -1,0 +1,81 @@
+---
+export interface Props {
+  message: string;
+}
+const { message } = Astro.props;
+import { Image } from 'astro:assets';
+import logoTienda from '../assets/logotiendaoscuro.svg';
+---
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-primary-50 to-primary-100 py-16 md:py-24 overflow-hidden">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0 z-10">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary-700 animate-fadeIn">Transforma tu hogar</h1>
+        <h2 class="text-2xl md:text-3xl font-medium mb-6 text-gray-700">Con los mejores electrodomésticos a precios increíbles</h2>
+        <p class="text-lg mb-8 text-gray-600">Encuentra todo lo que necesitas para equipar tu hogar con tecnología de última generación y diseños modernos que se adaptan a tu estilo.</p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="/productos" class="btn-primary transition-transform hover:scale-105 animate-bounce">
+            <i class="fas fa-shopping-cart mr-2"></i> Ver productos
+          </a>
+          <a href="#ofertas" class="btn-secondary hover:animate-pulse">
+            Ofertas especiales
+          </a>
+        </div>
+      </div>
+      
+      <div class="md:w-1/2 relative flex justify-center items-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg transform rotate-2 hover:rotate-0 transition-all duration-300">
+          <Image 
+            src={logoTienda} 
+            alt="PrecioHogar Logo" 
+            width={300} 
+            height={120} 
+            class="animate-float" 
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute inset-0 z-0 opacity-10">
+    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#0284c7" d="M0,0 L100,0 C80,20 50,40 20,60 L0,100 Z" />
+      <path fill="#0ea5e9" d="M100,0 L100,100 L0,100 C30,80 50,60 80,20 Z" />
+    </svg>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(-3deg); }
+    50% { transform: translateY(-10px) rotate(-1deg); }
+    100% { transform: translateY(0px) rotate(-3deg); }
+  }
+  
+  @keyframes float-delayed {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float-delayed 5s ease-in-out 1s infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 3s infinite;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1.5s ease-in;
+  }
+</style>

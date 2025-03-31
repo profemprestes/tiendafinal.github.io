@@ -1,0 +1,79 @@
+
+---
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  message: string;
+}
+const { message = "Nuestros Valores" } = Astro.props;
+---
+
+<!-- Valores de la Empresa -->
+<section class="py-16 bg-gradient-to-b from-white to-primary-50">
+  <div class="container mx-auto px-4">
+    <!-- Section Title with Decorative Element -->
+    <div class="flex items-center justify-center mb-16">
+      <div class="relative">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-600 relative z-10">{message}</h2>
+        <div class="absolute -bottom-3 left-0 w-full h-2 bg-primary-200 opacity-50 rounded-full"></div>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <!-- Confianza -->
+      <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2 border-t-4 border-primary-400 group">
+        <div class="w-20 h-20 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
+          <Icon name="tabler:handshake" class="w-10 h-10 text-primary-600" />
+        </div>
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 group-hover:text-primary-600 transition-colors duration-300">Confianza</h3>
+        <p class="text-gray-600 leading-relaxed">Construimos relaciones duraderas basadas en la honestidad y transparencia con nuestros clientes y proveedores.</p>
+      </div>
+      
+      <!-- Calidad -->
+      <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2 border-t-4 border-primary-500 group">
+        <div class="w-20 h-20 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
+          <Icon name="tabler:award" class="w-10 h-10 text-primary-600" />
+        </div>
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 group-hover:text-primary-600 transition-colors duration-300">Calidad</h3>
+        <p class="text-gray-600 leading-relaxed">Seleccionamos cuidadosamente cada producto para asegurar que cumple con los más altos estándares de calidad y durabilidad.</p>
+      </div>
+      
+      <!-- Servicio -->
+      <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2 border-t-4 border-primary-600 group">
+        <div class="w-20 h-20 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
+          <Icon name="tabler:users" class="w-10 h-10 text-primary-600" />
+        </div>
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 group-hover:text-primary-600 transition-colors duration-300">Servicio</h3>
+        <p class="text-gray-600 leading-relaxed">Nuestro equipo está comprometido a brindar una atención personalizada y soluciones adaptadas a cada cliente.</p>
+      </div>
+      
+      <!-- Innovación -->
+      <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2 border-t-4 border-primary-700 group">
+        <div class="w-20 h-20 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
+          <Icon name="tabler:bulb" class="w-10 h-10 text-primary-600" />
+        </div>
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 group-hover:text-primary-600 transition-colors duration-300">Innovación</h3>
+        <p class="text-gray-600 leading-relaxed">Nos mantenemos a la vanguardia de las últimas tendencias y tecnologías para ofrecer siempre lo mejor a nuestros clientes.</p>
+      </div>
+    </div>
+    
+    <!-- Values Statement -->
+    <div class="mt-16 max-w-3xl mx-auto text-center">
+      <blockquote class="text-xl italic text-gray-700 leading-relaxed">
+        "Estos valores son el corazón de nuestra empresa y guían cada decisión que tomamos para servir mejor a nuestros clientes."
+      </blockquote>
+      <p class="mt-4 text-primary-600 font-medium">— Claudio, Fundador de PrecioHogar</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  .group:hover .w-20 {
+    animation: pulse 2s infinite;
+  }
+</style>

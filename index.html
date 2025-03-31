@@ -1,0 +1,445 @@
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Peluquería canina Piaf en La Unión, Uruguay. Más de 7 años de experiencia ofreciendo servicios personalizados de peluquería, cuidado, higiene y belleza para perros." />
+    <title>Piaf - Peluquería Canina | La Unión, Uruguay</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import Alpine from 'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/+esm'
+      window.Alpine = Alpine
+      Alpine.start()
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body class="font-['Poppins'] text-gray-800 bg-white">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+      <nav class="container mx-auto px-4 py-3 flex justify-between items-center" x-data="{ isOpen: false }">
+        <div class="flex items-center">
+          <a href="/" class="text-2xl font-bold text-pink-600">Piaf</a>
+        </div>
+        
+        <button @click="isOpen = !isOpen" class="md:hidden focus:outline-none">
+          <svg class="h-6 w-6 fill-current text-pink-600" viewBox="0 0 24 24">
+            <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16v2H4V5zm0 6h16v2H4v-2zm0 6h16v2H4v-2z"></path>
+            <path x-show="isOpen" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+          </svg>
+        </button>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="#inicio" class="text-gray-600 hover:text-pink-600 transition duration-300">Inicio</a>
+          <a href="#servicios" class="text-gray-600 hover:text-pink-600 transition duration-300">Servicios</a>
+          <a href="#nosotros" class="text-gray-600 hover:text-pink-600 transition duration-300">Nosotros</a>
+          <a href="#galeria" class="text-gray-600 hover:text-pink-600 transition duration-300">Galería</a>
+          <a href="#testimonios" class="text-gray-600 hover:text-pink-600 transition duration-300">Testimonios</a>
+          <a href="#contacto" class="text-gray-600 hover:text-pink-600 transition duration-300">Contacto</a>
+        </div>
+        
+        <div x-show="isOpen" class="absolute top-full left-0 right-0 bg-white shadow-md md:hidden flex flex-col items-center py-4 space-y-4">
+          <a href="#inicio" @click="isOpen = false" class="text-gray-600 hover:text-pink-600 transition duration-300">Inicio</a>
+          <a href="#servicios" @click="isOpen = false" class="text-gray-600 hover:text-pink-600 transition duration-300">Servicios</a>
+          <a href="#nosotros" @click="isOpen = false" class="text-gray-600 hover:text-pink-600 transition duration-300">Nosotros</a>
+          <a href="#galeria" @click="isOpen = false" class="text-gray-600 hover:text-pink-600 transition duration-300">Galería</a>
+          <a href="#testimonios" @click="isOpen = false" class="text-gray-600 hover:text-pink-600 transition duration-300">Testimonios</a>
+          <a href="#contacto" @click="isOpen = false" class="text-gray-600 hover:text-pink-600 transition duration-300">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="inicio" class="relative bg-gradient-to-r from-pink-100 to-purple-100 py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-pink-600">Piaf Peluquería Canina</h1>
+            <h2 class="text-2xl md:text-3xl font-medium mb-6 text-gray-700">Cuidado personalizado para tu mejor amigo</h2>
+            <p class="text-lg mb-8 text-gray-600">En Piaf, nos dedicamos a brindar servicios de peluquería, higiene y belleza canina con más de 7 años de experiencia. Cada perro es único y recibe un tratamiento adaptado a sus necesidades.</p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <a href="https://wa.me/59891624850" target="_blank" class="btn-primary">
+                <i class="fab fa-whatsapp mr-2"></i> Contáctanos
+              </a>
+              <a href="#servicios" class="btn-secondary">
+                Ver servicios
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <div class="relative w-full max-w-md">
+              <svg class="absolute top-0 left-0 w-full h-full text-pink-200 opacity-50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M42.8,-65.8C56.9,-60.5,70.7,-52.6,79.3,-40.5C87.8,-28.3,91,-11.8,89.2,3.9C87.4,19.6,80.6,34.6,69.9,45.4C59.2,56.2,44.7,62.8,30.4,68.2C16.2,73.6,2.2,77.7,-13.2,78.2C-28.6,78.6,-45.4,75.4,-58.3,66.3C-71.3,57.2,-80.5,42.2,-84.2,26.3C-87.9,10.4,-86.1,-6.3,-80.3,-21C-74.6,-35.7,-64.8,-48.3,-52.2,-56.2C-39.6,-64,-19.8,-67,-2.2,-63.6C15.4,-60.2,30.9,-50.4,42.8,-65.8Z" transform="translate(100 100)" />
+              </svg>
+              <div class="relative overflow-hidden rounded-full w-64 h-64 mx-auto border-4 border-white shadow-lg">
+                <svg class="w-full h-full text-pink-600" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M30,15 C35,10 45,10 50,15 C55,10 65,10 70,15 C75,20 75,30 70,35 L65,40 L70,45 C75,50 75,60 70,65 C65,70 55,70 50,65 C45,70 35,70 30,65 C25,60 25,50 30,45 L35,40 L30,35 C25,30 25,20 30,15 Z" />
+                  <circle cx="38" cy="30" r="3" fill="white" />
+                  <circle cx="62" cy="30" r="3" fill="white" />
+                  <path d="M45,45 Q50,50 55,45" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="servicios" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12 text-pink-600">Nuestros Servicios</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="service-card">
+              <div class="icon-container">
+                <i class="fas fa-cut text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">Corte y Estilo</h3>
+              <p class="text-gray-600">Cortes personalizados según la raza, preferencias del dueño y necesidades específicas de cada perro.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon-container">
+                <i class="fas fa-bath text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">Baño Completo</h3>
+              <p class="text-gray-600">Baños con productos específicos para cada tipo de pelo y condición de la piel, incluyendo champús hipoalergénicos.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon-container">
+                <i class="fas fa-paw text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">Cuidado de Uñas</h3>
+              <p class="text-gray-600">Corte y limado de uñas realizado con cuidado para evitar molestias y mantener una correcta postura.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon-container">
+                <i class="fas fa-tooth text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">Higiene Dental</h3>
+              <p class="text-gray-600">Limpieza bucal para prevenir enfermedades dentales y mal aliento, usando productos especializados para mascotas.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon-container">
+                <i class="fas fa-heart text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">Tratamientos Especiales</h3>
+              <p class="text-gray-600">Servicios para condiciones específicas como deslanado, tratamientos anti-caída y masajes relajantes.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon-container">
+                <i class="fas fa-ear text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">Limpieza de Oídos</h3>
+              <p class="text-gray-600">Cuidado preventivo y mantenimiento de la higiene auditiva para evitar infecciones y acumulación de cerumen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="nosotros" class="py-16 bg-pink-50">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+              <div class="relative w-full max-w-md mx-auto">
+                <svg class="absolute -top-10 -left-10 w-full h-full text-pink-300 opacity-20" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M47.5,-73.3C57.8,-67.6,60.2,-47.5,64.8,-30.2C69.5,-12.9,76.4,1.6,74.1,14.8C71.8,28.1,60.2,39.9,47.3,49.8C34.4,59.7,20.2,67.6,3.9,72.1C-12.5,76.5,-30.9,77.5,-47.1,70.6C-63.2,63.6,-77.1,48.8,-81.4,31.8C-85.7,14.8,-80.5,-4.4,-72.6,-20.7C-64.7,-37,-54.2,-50.4,-41.4,-55.2C-28.6,-60,-14.3,-56.1,2.2,-59.5C18.8,-62.9,37.3,-73.5,47.5,-73.3Z" transform="translate(100 100)" />
+                </svg>
+                <div class="relative bg-white p-6 rounded-lg shadow-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-pink-600">+7 años de experiencia</h3>
+                  <p class="text-gray-600 mb-4">Desde 2016, en Piaf nos hemos dedicado con pasión al cuidado y embellecimiento de nuestros amigos caninos, convirtiendo cada visita en una experiencia de bienestar.</p>
+                  <p class="text-gray-600">Nuestra filosofía se basa en el respeto y entendimiento de cada perro como individuo, adaptando nuestros servicios a sus necesidades específicas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/2">
+              <h2 class="text-3xl font-bold mb-6 text-pink-600">Sobre Nosotros</h2>
+              <p class="text-lg text-gray-700 mb-4">En Piaf, entendemos que cada perro tiene su propia personalidad y necesidades únicas. Nuestra misión es proporcionar servicios de peluquería canina de la más alta calidad, asegurando que cada mascota se sienta cómoda y bien cuidada.</p>
+              <p class="text-lg text-gray-700 mb-4">Ubicados en La Unión, Uruguay, nuestro equipo de profesionales está formado por amantes de los animales con amplia experiencia en el sector de la peluquería canina.</p>
+              <p class="text-lg text-gray-700 mb-8">Nos enorgullece ofrecer un ambiente tranquilo y seguro donde tu mascota puede relajarse mientras recibe los cuidados que necesita.</p>
+              <div class="flex items-center p-4 bg-pink-100 rounded-lg">
+                <div class="mr-4 text-pink-600">
+                  <i class="fas fa-map-marker-alt text-2xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800">Ubicación</h4>
+                  <p class="text-gray-600">La Unión, Uruguay (No realizamos servicios a domicilio)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="galeria" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12 text-pink-600">Galería de Nuestro Trabajo</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="gallery-item">
+              <div class="rounded-lg bg-pink-100 h-64 flex items-center justify-center">
+                <svg class="w-40 h-40 text-pink-300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M65,25 C70,15 85,15 90,25 C95,35 85,40 85,40 L80,45 C80,45 95,50 95,65 C95,80 80,85 75,75 C70,65 75,60 75,60 L70,55 L60,65 L65,70 C65,70 60,75 65,85 C70,95 55,95 50,85 C45,75 50,70 50,70 L45,65 L35,55 L30,60 C30,60 35,65 30,75 C25,85 10,85 10,70 C10,55 25,50 25,50 L20,45 L15,40 C15,40 5,35 10,25 C15,15 30,15 35,25 C40,35 35,40 35,40 L40,45 L60,45 L65,40 C65,40 60,35 65,25 Z" />
+                  <circle cx="25" cy="30" r="3" fill="white" />
+                  <circle cx="75" cy="30" r="3" fill="white" />
+                  <path d="M45,55 Q50,60 55,55" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <p class="mt-3 text-center text-gray-600">Corte de pelo de Yorkshire Terrier</p>
+            </div>
+            <div class="gallery-item">
+              <div class="rounded-lg bg-purple-100 h-64 flex items-center justify-center">
+                <svg class="w-40 h-40 text-purple-300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="50" cy="50" rx="40" ry="35" fill="currentColor" />
+                  <ellipse cx="30" cy="40" rx="8" ry="7" fill="white" />
+                  <ellipse cx="70" cy="40" rx="8" ry="7" fill="white" />
+                  <circle cx="30" cy="40" r="3" fill="black" />
+                  <circle cx="70" cy="40" r="3" fill="black" />
+                  <ellipse cx="50" cy="60" rx="10" ry="7" fill="white" />
+                  <path d="M30,75 Q50,85 70,75" fill="none" stroke="currentColor" stroke-width="5" />
+                </svg>
+              </div>
+              <p class="mt-3 text-center text-gray-600">Baño completo para Bulldog Francés</p>
+            </div>
+            <div class="gallery-item">
+              <div class="rounded-lg bg-blue-100 h-64 flex items-center justify-center">
+                <svg class="w-40 h-40 text-blue-300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M20,40 C20,20 40,10 50,10 C60,10 80,20 80,40 C80,45 75,50 75,50 L85,60 C90,65 90,75 85,80 C80,85 70,85 65,80 L60,75 L55,80 C50,85 40,85 35,80 C30,85 20,85 15,80 C10,75 10,65 15,60 L25,50 C25,50 20,45 20,40 Z" />
+                  <circle cx="35" cy="40" r="5" fill="white" />
+                  <circle cx="65" cy="40" r="5" fill="white" />
+                  <circle cx="35" cy="40" r="2" fill="black" />
+                  <circle cx="65" cy="40" r="2" fill="black" />
+                  <path d="M40,55 Q50,60 60,55" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <p class="mt-3 text-center text-gray-600">Recorte de uñas para Labrador</p>
+            </div>
+            <div class="gallery-item">
+              <div class="rounded-lg bg-yellow-100 h-64 flex items-center justify-center">
+                <svg class="w-40 h-40 text-yellow-300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M30,20 C40,10 60,10 70,20 C75,25 75,35 70,40 L75,45 C80,50 80,60 75,65 C70,70 60,70 55,65 L50,60 L45,65 C40,70 30,70 25,65 C20,60 20,50 25,45 L30,40 C25,35 25,25 30,20 Z" />
+                  <ellipse cx="40" cy="30" rx="5" ry="4" fill="white" />
+                  <ellipse cx="60" cy="30" rx="5" ry="4" fill="white" />
+                  <circle cx="40" cy="30" r="2" fill="black" />
+                  <circle cx="60" cy="30" r="2" fill="black" />
+                  <ellipse cx="50" cy="45" rx="6" ry="4" fill="white" />
+                </svg>
+              </div>
+              <p class="mt-3 text-center text-gray-600">Tratamiento especial para Caniche</p>
+            </div>
+            <div class="gallery-item">
+              <div class="rounded-lg bg-green-100 h-64 flex items-center justify-center">
+                <svg class="w-40 h-40 text-green-300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M10,40 C10,20 30,10 50,10 C70,10 90,20 90,40 C90,50 80,55 80,55 L90,65 C95,70 95,80 90,85 C85,90 75,90 70,85 L60,75 L40,75 L30,85 C25,90 15,90 10,85 C5,80 5,70 10,65 L20,55 C20,55 10,50 10,40 Z" />
+                  <ellipse cx="30" cy="40" rx="6" ry="5" fill="white" />
+                  <ellipse cx="70" cy="40" rx="6" ry="5" fill="white" />
+                  <circle cx="30" cy="40" r="3" fill="black" />
+                  <circle cx="70" cy="40" r="3" fill="black" />
+                  <path d="M40,55 Q50,60 60,55" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </div>
+              <p class="mt-3 text-center text-gray-600">Limpieza de oídos para Golden Retriever</p>
+            </div>
+            <div class="gallery-item">
+              <div class="rounded-lg bg-red-100 h-64 flex items-center justify-center">
+                <svg class="w-40 h-40 text-red-300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M30,30 C40,20 60,20 70,30 C80,40 80,55 70,65 L60,75 C55,80 45,80 40,75 L30,65 C20,55 20,40 30,30 Z" />
+                  <circle cx="40" cy="45" r="5" fill="white" />
+                  <circle cx="60" cy="45" r="5" fill="white" />
+                  <circle cx="40" cy="45" r="2" fill="black" />
+                  <circle cx="60" cy="45" r="2" fill="black" />
+                  <path d="M42,60 Q50,65 58,60" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <p class="mt-3 text-center text-gray-600">Deslanado para Husky Siberiano</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12 text-pink-600">Lo que Dicen Nuestros Clientes</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="testimonial-card">
+              <div class="mb-4">
+                <svg class="w-8 h-8 text-pink-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.039 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
+                </svg>
+              </div>
+              <p class="text-gray-600 mb-4">"Estoy muy contenta con el servicio de Piaf. Mi perrita siempre regresa feliz y preciosa. El personal es muy profesional y realmente se nota que aman a los animales."</p>
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-pink-200 flex items-center justify-center">
+                  <span class="text-pink-600 font-medium">ML</span>
+                </div>
+                <div class="ml-3">
+                  <h4 class="font-medium text-gray-800">María López</h4>
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="mb-4">
+                <svg class="w-8 h-8 text-pink-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.039 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
+                </svg>
+              </div>
+              <p class="text-gray-600 mb-4">"Mi bulldog tiene la piel sensible y siempre habían sido un problema las peluquerías, hasta que encontramos Piaf. Utilizan productos especiales y el resultado es excelente. ¡Lo recomiendo totalmente!"</p>
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-blue-200 flex items-center justify-center">
+                  <span class="text-blue-600 font-medium">JR</span>
+                </div>
+                <div class="ml-3">
+                  <h4 class="font-medium text-gray-800">Juan Rodríguez</h4>
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="mb-4">
+                <svg class="w-8 h-8 text-pink-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.039 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
+                </svg>
+              </div>
+              <p class="text-gray-600 mb-4">"Lo que más valoro de Piaf es la paciencia que tienen con mi perro, que es bastante nervioso. Han logrado que la visita a la peluquería sea una experiencia positiva para él. Trabajo de primera calidad."</p>
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-green-200 flex items-center justify-center">
+                  <span class="text-green-600 font-medium">CS</span>
+                </div>
+                <div class="ml-3">
+                  <h4 class="font-medium text-gray-800">Carolina Silva</h4>
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contacto" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12 text-pink-600">Contacto</h2>
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+              <form class="contact-form">
+                <div class="mb-6">
+                  <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Nombre</label>
+                  <input type="text" id="name" class="form-input" placeholder="Tu nombre" required>
+                </div>
+                <div class="mb-6">
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" class="form-input" placeholder="Tu email" required>
+                </div>
+                <div class="mb-6">
+                  <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Mensaje</label>
+                  <textarea id="message" rows="4" class="form-input" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full">Enviar mensaje</button>
+              </form>
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+              <div class="bg-pink-50 p-6 rounded-lg h-full">
+                <h3 class="text-xl font-semibold mb-6 text-gray-800">Información de contacto</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <i class="fas fa-map-marker-alt text-pink-600"></i>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="text-gray-700 font-medium">Ubicación</h4>
+                      <p class="text-gray-600">La Unión, Uruguay</p>
+                      <p class="text-gray-600 mt-1 text-sm italic">No realizamos servicios a domicilio</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <i class="fab fa-whatsapp text-pink-600"></i>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="text-gray-700 font-medium">WhatsApp</h4>
+                      <p class="text-gray-600">+598 91 624 850</p>
+                      <a href="https://wa.me/59891624850" target="_blank" class="text-pink-600 hover:text-pink-800 inline-block mt-2 text-sm font-medium">Enviar mensaje <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <i class="fab fa-instagram text-pink-600"></i>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="text-gray-700 font-medium">Instagram</h4>
+                      <p class="text-gray-600">@pelucaninapiaf</p>
+                      <a href="https://www.instagram.com/pelucaninapiaf" target="_blank" class="text-pink-600 hover:text-pink-800 inline-block mt-2 text-sm font-medium">Seguir <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <i class="far fa-clock text-pink-600"></i>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="text-gray-700 font-medium">Horario de atención</h4>
+                      <p class="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
+                      <p class="text-gray-600">Sábados: 9:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/59891624850" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300 z-50">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <footer class="bg-gray-800 text-white py-10">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <h3 class="text-xl font-bold text-pink-400 mb-2">Piaf Peluquería Canina</h3>
+            <p class="text-gray-300">Cuidado de calidad para tu mejor amigo</p>
+          </div>
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 mb-6 md:mb-0">
+            <a href="#inicio" class="text-gray-300 hover:text-pink-400 transition duration-300">Inicio</a>
+            <a href="#servicios" class="text-gray-300 hover:text-pink-400 transition duration-300">Servicios</a>
+            <a href="#nosotros" class="text-gray-300 hover:text-pink-400 transition duration-300">Nosotros</a>
+            <a href="#galeria" class="text-gray-300 hover:text-pink-400 transition duration-300">Galería</a>
+            <a href="#testimonios" class="text-gray-300 hover:text-pink-400 transition duration-300">Testimonios</a>
+            <a href="#contacto" class="text-gray-300 hover:text-pink-400 transition duration-300">Contacto</a>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://wa.me/59891624850" target="_blank" class="text-gray-300 hover:text-green-400 transition duration-300">
+              <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/pelucaninapiaf" target="_blank" class="text-gray-300 hover:text-pink-400 transition duration-300">
+              <i class="fab fa-instagram text-2xl"></i>
+            </a>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+          <p>&copy; 2023 Piaf Peluquería Canina. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

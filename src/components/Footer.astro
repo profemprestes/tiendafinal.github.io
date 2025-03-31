@@ -1,0 +1,198 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import Logo from '../assets/logotienda.svg';
+---
+
+<footer class="bg-gradient-to-b from-primary-50 to-primary-100 pt-12 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="footer-column">
+        <div class="flex items-center mb-4 transform hover:scale-105 transition-transform duration-300">
+          <Image src={Logo} alt="PrecioHogar Logo" width={50} height={50} class="mr-2" />
+          <h3 class="text-xl font-bold text-primary-600">PrecioHogar</h3>
+        </div>
+        <p class="text-gray-600 mb-4">Tu fuente confiable de electrodomésticos de calidad a precios accesibles.</p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="social-icon bg-white p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300" aria-label="Facebook">
+            <Icon name="tabler:brand-facebook" class="w-5 h-5 text-primary-600" />
+          </a>
+          <a href="#" class="social-icon bg-white p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300" aria-label="Instagram">
+            <Icon name="tabler:brand-instagram" class="w-5 h-5 text-primary-600" />
+          </a>
+          <a href="#" class="social-icon bg-white p-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300" aria-label="Twitter">
+            <Icon name="tabler:brand-twitter" class="w-5 h-5 text-primary-600" />
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="text-lg font-semibold mb-4 border-b border-primary-200 pb-2 text-primary-700">Enlaces Rápidos</h3>
+        <ul class="space-y-2">
+          <li class="footer-link-item">
+            <a href="/" class="text-gray-600 hover:text-primary-600 transition-colors duration-300 flex items-center">
+              <Icon name="tabler:home" class="w-4 h-4 mr-2 text-primary-400" />
+              Inicio
+            </a>
+          </li>
+          <li class="footer-link-item">
+            <a href="/productos" class="text-gray-600 hover:text-primary-600 transition-colors duration-300 flex items-center">
+              <Icon name="tabler:shopping-cart" class="w-4 h-4 mr-2 text-primary-400" />
+              Productos
+            </a>
+          </li>
+          <li class="footer-link-item">
+            <a href="/nosotros" class="text-gray-600 hover:text-primary-600 transition-colors duration-300 flex items-center">
+              <Icon name="tabler:users" class="w-4 h-4 mr-2 text-primary-400" />
+              Nosotros
+            </a>
+          </li>
+          <li class="footer-link-item">
+            <a href="/contacto" class="text-gray-600 hover:text-primary-600 transition-colors duration-300 flex items-center">
+              <Icon name="tabler:message" class="w-4 h-4 mr-2 text-primary-400" />
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="text-lg font-semibold mb-4 border-b border-primary-200 pb-2 text-primary-700">Categorías</h3>
+        <ul class="space-y-2">
+          <li class="footer-link-item">
+            <a href="/productos/refrigeradores" class="text-gray-600 hover:text-primary-600 transition-colors duration-300 flex items-center">
+              <Icon name="tabler:fridge" class="w-4 h-4 mr-2 text-primary-400" />
+              Refrigeradores
+            </a>
+          </li>
+          <li class="footer-link-item">
+            <a href="/productos/lavadoras" class="text-gray-600 hover:text-primary-600 transition-colors duration-300 flex items-center">
+              <Icon name="tabler:wash-machine" class="w-4 h-4 mr-2 text-primary-400" />
+              Lavadoras
+            </a>
+          </li>
+          <li class="footer-link-item">
+            <a href="/productos/estufas" class="text-gray-600 hover:text-primary-600 transition-colors duration-300 flex items-center">
+              <Icon name="tabler:cooker" class="w-4 h-4 mr-2 text-primary-400" />
+              Estufas
+            </a>
+          </li>
+          <li class="footer-link-item">
+            <a href="/productos/televisores" class="text-gray-600 hover:text-primary-600 transition-colors duration-300 flex items-center">
+              <Icon name="tabler:device-tv" class="w-4 h-4 mr-2 text-primary-400" />
+              Televisores
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="text-lg font-semibold mb-4 border-b border-primary-200 pb-2 text-primary-700">Contáctanos</h3>
+        <ul class="space-y-3 text-gray-600">
+          <li class="flex items-center contact-item hover:text-primary-600 transition-colors duration-300">
+            <Icon name="tabler:mail" class="w-5 h-5 mr-2 text-primary-500" />
+            <span>info@preciohogar.com</span>
+          </li>
+          <li class="flex items-center contact-item hover:text-primary-600 transition-colors duration-300">
+            <Icon name="tabler:phone" class="w-5 h-5 mr-2 text-primary-500" />
+            <span>(555) 123-4567</span>
+          </li>
+          <li class="flex items-center contact-item hover:text-primary-600 transition-colors duration-300">
+            <Icon name="tabler:map-pin" class="w-5 h-5 mr-2 text-primary-500" />
+            <span>Calle Principal 123, Ciudad</span>
+          </li>
+        </ul>
+        <div class="mt-4 pt-4 border-t border-primary-200">
+          <h4 class="text-sm font-semibold mb-2 text-primary-700">Suscríbete a nuestro boletín</h4>
+          <form class="flex">
+            <input 
+              type="email" 
+              placeholder="Tu email" 
+              class="flex-1 px-3 py-2 border border-primary-200 rounded-l-md focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500" 
+            />
+            <button 
+              type="submit" 
+              class="bg-primary-600 text-white px-4 py-2 rounded-r-md hover:bg-primary-700 transition-colors duration-300 flex items-center"
+            >
+              <Icon name="tabler:send" class="w-4 h-4" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-12 pt-8 border-t border-primary-200 text-center text-gray-600">
+      <p class="copyright">&copy; {new Date().getFullYear()} PrecioHogar. Todos los derechos reservados.</p>
+      <div class="mt-4 flex flex-wrap justify-center gap-4 text-sm">
+        <a href="/privacidad" class="text-gray-500 hover:text-primary-600 transition-colors duration-300">Política de Privacidad</a>
+        <a href="/terminos" class="text-gray-500 hover:text-primary-600 transition-colors duration-300">Términos de Servicio</a>
+        <a href="/devoluciones" class="text-gray-500 hover:text-primary-600 transition-colors duration-300">Política de Devoluciones</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-column {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .footer-column:nth-child(1) { animation-delay: 0.1s; }
+  .footer-column:nth-child(2) { animation-delay: 0.2s; }
+  .footer-column:nth-child(3) { animation-delay: 0.3s; }
+  .footer-column:nth-child(4) { animation-delay: 0.4s; }
+  
+  .footer-link-item {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-link-item:hover {
+    transform: translateX(5px);
+  }
+  
+  .contact-item {
+    transition: all 0.3s ease;
+  }
+  
+  .contact-item:hover {
+    transform: translateX(3px);
+  }
+  
+  .copyright {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .copyright::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 50%;
+    background-color: var(--color-primary-500);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .copyright:hover::after {
+    width: 100%;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-3px);
+  }
+</style>

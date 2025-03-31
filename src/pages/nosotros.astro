@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Heros from '@components/Heros.astro';
+import Nuestrahistoria from '../components/nuestrahistoria.astro';
+import Equipos from '../components/equipos.astro';
+import Valores from '../components/Valores.astro';
+import Llamadacto from '../components/Llamadacto.astro';
+---
+
+<Layout title="Nosotros | PrecioHogar" description="Conoce más sobre PrecioHogar, tu tienda de confianza para electrodomésticos y artículos para el hogar con los mejores precios y facilidades de pago.">
+  <main class="overflow-hidden">
+    <!-- Hero Section -->
+    <Heros message="Conoce nuestra historia" />
+    
+    <!-- Main Content with Decorative Elements -->
+    <div class="relative">
+      <!-- Decorative background elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/4 -left-64 w-96 h-96 rounded-full bg-primary-100 opacity-50"></div>
+        <div class="absolute top-3/4 -right-64 w-96 h-96 rounded-full bg-primary-100 opacity-50"></div>
+      </div>
+      
+      <!-- Content sections with improved spacing -->
+      <div class="relative z-10">
+        <!-- Nuestra Historia Section -->
+        <section class="py-20 bg-white">
+          <Nuestrahistoria message="Nuestra Historia" />
+        </section>
+        
+        <!-- Equipos Section - No background color to use component's styling -->
+        <Equipos message="Nuestro Equipo" />
+        
+        <!-- Valores Section - Removed section wrapper to avoid nesting -->
+        <Valores message="Nuestros Valores" />
+      </div>
+    </div>
+    
+    <!-- Call to Action Section -->
+    <section class="mt-12">
+      <Llamadacto />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Section transitions */
+  section {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Add animation for sections when they come into view */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+      opacity: 0;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+</style>
+
+<script>
+  // Add intersection observer to animate sections when they come into view
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>

@@ -1,0 +1,280 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import Herop from '@components/Herop.astro';
+
+// Mock products data - in a real app this would come from a database or API
+const products = [
+  {
+    id: "1",
+    name: "Lavadora Smart Plus",
+    price: 599,
+    oldPrice: 749,
+    rating: 4.5,
+    reviews: 42,
+    category: "electrodomesticos",
+    description: "Lavadora de carga frontal con tecnología EcoWash y 10 programas",
+    image: "/images/products/placeholder.svg",
+    badge: "-20%"
+  },
+  {
+    id: "2",
+    name: "Horno Eléctrico Pro",
+    price: 329,
+    oldPrice: 389,
+    rating: 5,
+    reviews: 36,
+    category: "cocina",
+    description: "Horno de convección con pantalla digital y múltiples funciones de cocción",
+    image: "/images/products/placeholder.svg",
+    badge: "-15%"
+  },
+  {
+    id: "3",
+    name: "Smart TV 55\" UHD",
+    price: 899,
+    rating: 4.5,
+    reviews: 28,
+    category: "tecnologia",
+    description: "Televisor LED Ultra HD 4K con sistema operativo inteligente y asistente de voz",
+    image: "/images/products/placeholder.svg",
+    badge: "Nuevo"
+  },
+  {
+    id: "4",
+    name: "Sofá Modular Comfort",
+    price: 749,
+    oldPrice: 999,
+    rating: 4,
+    reviews: 19,
+    category: "muebles",
+    description: "Sofá de 3 plazas con chaise longue y tapizado de alta resistencia",
+    image: "/images/products/placeholder.svg",
+    badge: "-25%"
+  },
+  {
+    id: "5",
+    name: "Refrigerador French Door",
+    price: 1299,
+    oldPrice: 1499,
+    rating: 4.7,
+    reviews: 53,
+    category: "electrodomesticos",
+    description: "Refrigerador de gran capacidad con dispensador de agua y hielo",
+    image: "/images/products/placeholder.svg",
+    badge: "-13%"
+  },
+  {
+    id: "6",
+    name: "Cafetera Automática",
+    price: 199,
+    rating: 4.2,
+    reviews: 31,
+    category: "cocina",
+    description: "Cafetera con molinillo integrado y múltiples opciones de preparación",
+    image: "/images/products/placeholder.svg"
+  },
+  {
+    id: "7",
+    name: "Tablet Pro 11\"",
+    price: 449,
+    oldPrice: 499,
+    rating: 4.6,
+    reviews: 47,
+    category: "tecnologia",
+    description: "Tablet de alta gama con pantalla de retina y procesador avanzado",
+    image: "/images/products/placeholder.svg",
+    badge: "-10%"
+  },
+  {
+    id: "8",
+    name: "Mesa de Centro Moderna",
+    price: 199,
+    rating: 4.3,
+    reviews: 24,
+    category: "muebles",
+    description: "Mesa de centro con diseño contemporáneo y materiales de alta calidad",
+    image: "/images/products/placeholder.svg"
+  },
+  {
+    id: "9",
+    name: "Aspiradora Robot Smart",
+    price: 299,
+    oldPrice: 399,
+    rating: 4.4,
+    reviews: 62,
+    category: "electrodomesticos",
+    description: "Robot aspirador con mapeo inteligente y control por app",
+    image: "/images/products/placeholder.svg",
+    badge: "-25%"
+  },
+  {
+    id: "10",
+    name: "Licuadora Profesional",
+    price: 159,
+    rating: 4.8,
+    reviews: 45,
+    category: "cocina",
+    description: "Licuadora de alto rendimiento con 6 velocidades y vaso de vidrio",
+    image: "/images/products/placeholder.svg"
+  },
+  {
+    id: "11",
+    name: "Soundbar Premium",
+    price: 249,
+    oldPrice: 299,
+    rating: 4.6,
+    reviews: 33,
+    category: "tecnologia",
+    description: "Barra de sonido con subwoofer inalámbrico y Bluetooth",
+    image: "/images/products/placeholder.svg",
+    badge: "-17%"
+  },
+  {
+    id: "12",
+    name: "Silla Ergonómica",
+    price: 179,
+    rating: 4.5,
+    reviews: 38,
+    category: "muebles",
+    description: "Silla de oficina ajustable con soporte lumbar",
+    image: "/images/products/placeholder.svg"
+  },
+  {
+    id: "13",
+    name: "Microondas Digital",
+    price: 129,
+    oldPrice: 159,
+    rating: 4.3,
+    reviews: 51,
+    category: "electrodomesticos",
+    description: "Microondas con panel táctil y múltiples funciones de cocción",
+    image: "/images/products/placeholder.svg",
+    badge: "-19%"
+  },
+  {
+    id: "14",
+    name: "Batidora Stand Mixer",
+    price: 229,
+    rating: 4.7,
+    reviews: 29,
+    category: "cocina",
+    description: "Batidora de pie con bowl de acero inoxidable y accesorios",
+    image: "/images/products/placeholder.svg"
+  },
+  {
+    id: "15",
+    name: "Smart Watch Pro",
+    price: 199,
+    oldPrice: 249,
+    rating: 4.4,
+    reviews: 56,
+    category: "tecnologia",
+    description: "Reloj inteligente con monitor cardíaco y GPS integrado",
+    image: "/images/products/placeholder.svg",
+    badge: "-20%"
+  },
+  {
+    id: "16",
+    name: "Estantería Modular",
+    price: 159,
+    rating: 4.2,
+    reviews: 41,
+    category: "muebles",
+    description: "Estantería personalizable con módulos ajustables",
+    image: "/images/products/placeholder.svg"
+  },
+  {
+    id: "17",
+    name: "Ventilador Torre",
+    price: 89,
+    oldPrice: 109,
+    rating: 4.3,
+    reviews: 47,
+    category: "electrodomesticos",
+    description: "Ventilador de torre oscilante con control remoto",
+    image: "/images/products/placeholder.svg",
+    badge: "-18%"
+  },
+  {
+    id: "18",
+    name: "Freidora de Aire",
+    price: 119,
+    rating: 4.6,
+    reviews: 73,
+    category: "cocina",
+    description: "Freidora de aire digital con 8 programas preestablecidos",
+    image: "/images/products/placeholder.svg"
+  }
+];
+
+// Get unique categories
+const categories = ["all", ...new Set(products.map(product => product.category))];
+---
+
+<Layout title="Productos | PrecioHogar" description="Explora nuestra amplia selección de electrodomésticos y artículos para el hogar con los mejores precios y facilidades de pago.">
+  <main>
+    <Herop message="Explore our products" />
+
+    <section id="filtros" class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- Filter Buttons -->
+        <h2 class="text-2xl font-bold text-primary-700 mb-6">Filtrar por categoría</h2>
+        <div class="mb-10 flex flex-wrap gap-3">
+          {categories.map((category, index) => (
+            <button 
+              class={`filter-button px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${index === 0 ? 'bg-primary-600 text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-sm'}`}
+              data-category={category === "all" ? "all" : category}
+            >
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>
+          ))}
+        </div>
+
+        <!-- Products Grid -->
+        <div id="productos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {products.map(product => (
+            <ProductCard {...product} />
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  // Add filter functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const productCards = document.querySelectorAll('.product-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary-600', 'text-white', 'shadow-md');
+          btn.classList.add('bg-gray-100', 'text-gray-700');
+        });
+        
+        // Add active class to clicked button
+        button.classList.remove('bg-gray-100', 'text-gray-700');
+        button.classList.add('bg-primary-600', 'text-white', 'shadow-md');
+        
+        const category = button.getAttribute('data-category');
+        
+        // Filter products
+        productCards.forEach(card => {
+          if (category === 'all') {
+            (card as HTMLElement).style.display = 'block';
+          } else {
+            if (card.getAttribute('data-category') === category) {
+              (card as HTMLElement).style.display = 'block';
+            } else {
+              (card as HTMLElement).style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  });
+</script>

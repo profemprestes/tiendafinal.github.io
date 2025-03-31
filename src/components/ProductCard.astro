@@ -1,0 +1,49 @@
+---
+export interface Props {
+  id: string;
+  name: string;
+  price: number;
+  oldPrice?: number;
+  rating: number;
+  reviews: number;
+  category: string;
+  description: string;
+  image: string;
+  badge?: string;
+}
+
+const { id, name, price, oldPrice, rating, reviews, category, description, image, badge } = Astro.props;
+---
+
+<div class="product-card product-item" data-category={category}>
+  <div class="relative mb-4">
+    <div class="bg-gray-100 rounded-lg p-4 flex items-center justify-center h-48">
+      <img src={image} alt={name} class="max-h-full max-w-full object-contain" />
+    </div>
+    {badge && <div class="absolute top-2 right-2 bg-primary-600 text-white text-xs font-bold px-2 py-1 rounded">{badge}</div>}
+  </div>
+  <h3 class="text-lg font-semibold mb-2">{name}</h3>
+  <div class="flex items-center mb-2">
+    <span class="text-yellow-400 flex">
+      {Array.from({ length: Math.floor(rating) }).map(() => (
+        <i class="fas fa-star"></i>
+      ))}
+      {rating % 1 !== 0 && <i class="fas fa-star-half-alt"></i>}
+      {Array.from({ length: Math.floor(5 - rating) }).map(() => (
+        <i class="far fa-star"></i>
+      ))}
+    </span>
+    <span class="text-xs text-gray-500 ml-2">({reviews} reseñas)</span>
+  </div>
+  <p class="text-gray-600 text-sm mb-4">{description}</p>
+  <div class="mt-auto">
+    <div class="flex items-center mb-3">
+      <span class="price">${price}</span>
+      {oldPrice && <span class="old-price ml-2">${oldPrice}</span>}
+    </div>
+    <button class="btn-primary w-full add-to-cart" data-product-id={id} data-product-name={name} data-product-price={price}>
+      Añadir al carrito
+    </button>
+  </div>
+</div>
+

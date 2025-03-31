@@ -1,0 +1,59 @@
+---
+export interface Props {
+  message: string;
+}
+const { message } = Astro.props;
+---
+
+<!-- Hero Section -->
+<section class="relative py-20 overflow-hidden bg-gradient-to-r from-primary-50 via-primary-100 to-primary-50">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-primary-300 blur-3xl"></div>
+    <div class="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-primary-400 blur-3xl"></div>
+  </div>
+  
+  <div class="container relative mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-primary-700 leading-tight animate-fadeIn">
+        <span class="inline-block transform hover:scale-105 transition-transform duration-300">Contacto</span>
+      </h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-8 animate-slideUp">
+        Estamos aquí para responder tus preguntas y ayudarte con cualquier consulta sobre nuestros productos y servicios.
+      </p>
+      
+      <div class="flex flex-wrap justify-center gap-4 animate-fadeIn animation-delay-300">
+        <a href="#contact-form" class="px-8 py-3 bg-primary-600 text-white rounded-full font-medium hover:bg-primary-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          Contáctanos ahora
+        </a>
+        <a href="/productos" class="px-8 py-3 bg-white text-primary-600 rounded-full font-medium hover:bg-gray-50 transition-colors duration-300 shadow-md hover:shadow-lg border border-primary-200">
+          Ver productos
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-slideUp {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+</style>

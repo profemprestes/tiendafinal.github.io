@@ -1,0 +1,84 @@
+---
+export interface Props {
+  message: string;
+}
+const { message } = Astro.props;
+---
+
+<!-- Equipo -->
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <!-- Section Title with Decorative Element -->
+    <div class="flex items-center justify-center mb-16">
+      <div class="relative">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-600 relative z-10">Nuestro Equipo</h2>
+        <div class="absolute -bottom-3 left-0 w-full h-2 bg-primary-200 opacity-50 rounded-full"></div>
+      </div>
+    </div>
+    
+
+
+<!-- Mensaje del Equipo - Enhanced Design -->
+<section class="py-16 bg-gradient-to-br from-primary-50 to-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-32 h-32 bg-primary-100 rounded-full -mr-16 -mt-16 opacity-70"></div>
+        <div class="absolute bottom-0 left-0 w-24 h-24 bg-primary-100 rounded-full -ml-12 -mb-12 opacity-70"></div>
+        
+        <div class="relative">
+          <h2 class="text-3xl font-bold mb-8 text-primary-600 text-center">Mensaje de Nuestro Equipo</h2>
+          
+          <div class="relative mb-10">
+            <svg class="absolute top-0 left-0 w-16 h-16 text-primary-300 transform -translate-x-6 -translate-y-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.039 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
+            </svg>
+            <blockquote class="text-xl italic text-gray-700 px-8 py-4 leading-relaxed">
+              "En PrecioHogar creemos que cada hogar merece lo mejor. Nuestro compromiso es brindar productos de calidad que mejoren la vida diaria de nuestros clientes, con un servicio que exceda sus expectativas. No vendemos solo electrodomésticos, ofrecemos soluciones para hacer la vida más cómoda y placentera."
+            </blockquote>
+          </div>
+          
+          <div class="flex items-center justify-center">
+            <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center shadow-md">
+              <span class="text-primary-600 font-bold">C</span>
+            </div>
+            <div class="ml-4 text-left">
+              <h3 class="font-bold text-gray-800">Claudio</h3>
+              <p class="text-gray-600">Fundador de PrecioHogar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+
+<style>
+  .team-card {
+    transition: all 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .social-icon {
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-3px);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  section {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+</style>

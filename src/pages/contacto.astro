@@ -1,0 +1,273 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Heroc from '../components/Heroc.astro';
+---
+
+<Layout title="Contacto | PrecioHogar" description="Ponte en contacto con PrecioHogar para cualquier consulta sobre nuestros productos, precios o servicios. Estamos aquí para ayudarte.">
+  <main>
+<Heroc message="Contacto" />
+
+
+    <!-- Contact Information and Form -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex flex-col lg:flex-row shadow-lg rounded-lg overflow-hidden">
+            <div class="lg:w-1/3 bg-primary-600 text-white p-8 lg:p-12">
+              <h2 class="text-2xl font-bold mb-6">Información de contacto</h2>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <i class="fas fa-map-marker-alt text-primary-300"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-medium">Dirección</h4>
+                    <p class="mt-1">Av. Principal 1234, Montevideo, Uruguay</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <i class="fas fa-phone text-primary-300"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-medium">Teléfono</h4>
+                    <p class="mt-1">+598 92 315 819</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <i class="fas fa-envelope text-primary-300"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-medium">Email</h4>
+                    <p class="mt-1">info@preciohogar.com</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <i class="fas fa-clock text-primary-300"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-medium">Horario de atención</h4>
+                    <p class="mt-1">Lunes a Viernes: 9:00 - 19:00</p>
+                    <p class="mt-1">Sábados: 9:00 - 13:00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-12">
+                <h4 class="font-medium mb-4">Síguenos en redes sociales</h4>
+                <div class="flex space-x-4">
+                  <a href="https://www.facebook.com/PrecioHogarUruguay" target="_blank" class="text-white hover:text-primary-200 transition duration-300">
+                    <i class="fab fa-facebook-f text-lg"></i>
+                  </a>
+                  <a href="#" class="text-white hover:text-primary-200 transition duration-300">
+                    <i class="fab fa-twitter text-lg"></i>
+                  </a>
+                  <a href="#" class="text-white hover:text-primary-200 transition duration-300">
+                    <i class="fab fa-instagram text-lg"></i>
+                  </a>
+                  <a href="#" class="text-white hover:text-primary-200 transition duration-300">
+                    <i class="fab fa-linkedin-in text-lg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-2/3 p-8 lg:p-12 bg-white">
+              <h2 class="text-2xl font-bold mb-6 text-gray-800">Envíanos un mensaje</h2>
+              <form class="contact-form space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Nombre completo</label>
+                    <input type="text" id="name" class="form-input" placeholder="Tu nombre" required>
+                  </div>
+                  <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" class="form-input" placeholder="Tu email" required>
+                  </div>
+                </div>
+                <div>
+                  <label for="phone" class="block mb-2 text-sm font-medium text-gray-700">Teléfono</label>
+                  <input type="tel" id="phone" class="form-input" placeholder="Tu teléfono">
+                </div>
+                <div>
+                  <label for="subject" class="block mb-2 text-sm font-medium text-gray-700">Asunto</label>
+                  <input type="text" id="subject" class="form-input" placeholder="Asunto del mensaje" required>
+                </div>
+                <div>
+                  <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Mensaje</label>
+                  <textarea id="message" rows="5" class="form-input" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                </div>
+                <div>
+                  <button type="submit" class="btn-primary w-full">Enviar mensaje</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-primary-600">Nuestra ubicación</h2>
+        <div class="max-w-6xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+          <!-- Placeholder for map -->
+          <div class="bg-gray-200 h-96 flex items-center justify-center">
+            <div class="text-center p-8">
+              <svg class="w-16 h-16 text-primary-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">PrecioHogar - Tienda Principal</h3>
+              <p class="text-gray-600">Av. Principal 1234, Montevideo, Uruguay</p>
+              <a href="https://maps.google.com" target="_blank" class="mt-4 inline-block text-primary-600 hover:text-primary-700 font-medium">
+                Ver en Google Maps <i class="fas fa-external-link ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Information Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-primary-600">Información de Envíos</h2>
+        <div class="max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
+              <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-truck text-primary-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">Montevideo</h3>
+              </div>
+              <div class="bg-white rounded-lg p-4 mb-4 shadow-sm">
+                <div class="flex items-start">
+                  <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium text-gray-700">Entrega gratuita</h4>
+                    <p class="text-gray-600 text-sm">En compras superiores a $2000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg p-4 mb-4 shadow-sm">
+                <div class="flex items-start">
+                  <i class="fas fa-clock text-primary-500 mt-1 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium text-gray-700">Tiempo de entrega</h4>
+                    <p class="text-gray-600 text-sm">24-48 horas hábiles</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium text-gray-700">Zonas de cobertura</h4>
+                    <p class="text-gray-600 text-sm">Toda el área metropolitana de Montevideo</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Map placeholder -->
+              <div class="mt-6 bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+                <p class="text-gray-500">Mapa de Montevideo</p>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
+              <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-shipping-fast text-primary-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">Interior del País</h3>
+              </div>
+              <div class="bg-white rounded-lg p-4 mb-4 shadow-sm">
+                <div class="flex items-start">
+                  <i class="fas fa-truck text-blue-500 mt-1 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium text-gray-700">Correo Uruguayo</h4>
+                    <p class="text-gray-600 text-sm">Envíos a todo el país</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg p-4 mb-4 shadow-sm">
+                <div class="flex items-start">
+                  <i class="fas fa-box text-orange-500 mt-1 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium text-gray-700">DAC</h4>
+                    <p class="text-gray-600 text-sm">Servicio premium para entregas rápidas</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="flex items-start">
+                  <i class="fas fa-clock text-primary-500 mt-1 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium text-gray-700">Tiempo estimado</h4>
+                    <p class="text-gray-600 text-sm">3-5 días hábiles (dependiendo de la ubicación)</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Map placeholder -->
+              <div class="mt-6 bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+                <p class="text-gray-500">Mapa de Uruguay</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12 text-primary-600">Preguntas frecuentes</h2>
+          <div class="space-y-6">
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">¿Cuáles son los métodos de pago aceptados?</h3>
+              <p class="text-gray-600">Aceptamos tarjetas de crédito y débito (Visa, MasterCard, American Express), transferencias bancarias y pago en efectivo al momento de la entrega.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">¿Cuál es el tiempo de los productos?</h3>
+              <p class="text-gray-600">El tiempo de entrega varía según la ubicación y disponibilidad del producto. Generalmente, las entregas en Montevideo se realizan en 24-48 horas, mientras que para el interior del país puede tomar entre 3-5 días hábiles.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">¿Ofrecen garantía en todos los productos?</h3>
+              <p class="text-gray-600">Sí, todos nuestros productos cuentan con garantía del fabricante. Adicionalmente, ofrecemos planes de garantía extendida para mayor tranquilidad en tus compras.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">¿Cómo puedo realizar un cambio o devolución?</h3>
+              <p class="text-gray-600">Puedes solicitar un cambio o devolución dentro de los 30 días posteriores a la compra. El producto debe estar en su empaque original y en perfectas condiciones. Contáctanos para iniciar el proceso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-primary-500 to-primary-700 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">¿Necesitas ayuda inmediata?</h2>
+        <p class="xl mb-8 max-w-2xl mx-auto">Nuestro equipo de atención al cliente está listo para asistirte en cualquier consulta.</p>
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="https://wa.me/59892315819" target="_blank" class="bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition duration-300 flex items-center justify-center">
+            <i class="fab fa-whatsapp mr-2 text-green-500 text-xl"></i> Contactar por WhatsApp
+          </a>
+          <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-md font-medium transition duration-300">
+            Chat en línea
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fixed WhatsApp Button (Mobile Only) -->
+  <a href="https://wa.me/59892315819" 
+     target="_blank" 
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300 z-50 md:hidden">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+</Layout>

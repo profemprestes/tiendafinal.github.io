@@ -14,6 +14,6 @@ export default defineConfig({
     }), 
     react()
   ],
-  site: 'https://preciohogar.com',
-  base: '/',
+  site: 'https://profemprestes.github.io/tiendafinal',
+  base: '/tiendafinal',
 });

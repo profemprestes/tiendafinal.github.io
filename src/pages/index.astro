@@ -2,14 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Heroi from '../components/Heroi.astro';
 import Categoriasdestacadas from '../components/Categoriasdestacadas.astro';
-import '../styles/global.css'; // Import Tailwind styles
+import '../styles/tailwind.css'; // Import Tailwind styles
 ---
 
 <Layout title="PrecioHogar - Electrodomésticos y artículos para el hogar" description="PrecioHogar es tu tienda online de electrodomésticos y artículos para el hogar con los mejores precios y facilidades de pago.">
   <main>
     <Heroi message="Bienvenido a PrecioHogar" />
     <!-- Categories Section -->
-   <Categoriasdestacadas />
+<Categoriasdestacadas message="Featured Categories" />
     <!-- End Categories Section -->
     
   

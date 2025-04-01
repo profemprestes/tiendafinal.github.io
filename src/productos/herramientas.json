@@ -1,0 +1,37 @@
+[
+  {
+    "id": 401,
+    "nombre": "Taladro Inalámbrico Pro-Master",
+    "precio": 129.99,
+    "imagen": "src/assets/images/product5.jpg",
+    "descripcion": "Taladro de alto rendimiento con batería de litio de larga duración y 20 niveles de torque ajustable. Incluye maletín con 15 accesorios esenciales y cargador rápido. La herramienta perfecta para profesionales y entusiastas del bricolaje que buscan potencia y precisión."
+  },
+  {
+    "id": 402,
+    "nombre": "Set de Herramientas Premium 150 piezas",
+    "precio": 189.50,
+    "imagen": "src/assets/images/product11.jpg",
+    "descripcion": "Kit completo con herramientas de acero al cromo-vanadio y acabado anticorrosión. Incluye llaves, destornilladores, alicates y mucho más en un maletín organizador de alta resistencia. La solución definitiva para cualquier proyecto en casa o taller con calidad profesional garantizada."
+  },
+  {
+    "id": 403,
+    "nombre": "Sierra Circular Precision Cut",
+    "precio": 149.99,
+    "imagen": "src/assets/images/product7.jpg",
+    "descripcion": "Sierra con motor de 1800W y disco de 7¼ pulgadas para cortes precisos en diversos materiales. Su sistema láser de guía y empuñadura ergonómica aseguran máxima precisión y comodidad. Incluye tope paralelo ajustable y bolsa recolectora de polvo para un trabajo limpio y eficiente."
+  },
+  {
+    "id": 404,
+    "nombre": "Compresor de Aire Portátil MultiPro",
+    "precio": 99.95,
+    "imagen": "src/assets/images/product9.jpg",
+    "descripcion": "Compresor compacto y potente con tanque de 6 litros y presión máxima de 8 bar. Perfecto para inflar neumáticos, usar herramientas neumáticas y trabajos de pintura. Su diseño ligero con asa de transporte y bajo nivel de ruido lo convierten en el aliado ideal para cualquier tarea."
+  },
+  {
+    "id": 405,
+    "nombre": "Caja de Herramientas Modular Stack-System",
+    "precio": 79.99,
+    "imagen": "src/assets/images/product1.jpg",
+    "descripcion": "Sistema de almacenamiento apilable con tres módulos independientes y conectables entre sí. Fabricada en polímero de alta resistencia con cierres metálicos y compartimentos personalizables. Organiza y transporta tus herramientas con máxima eficiencia y protección contra golpes y humedad."
+  }
+]

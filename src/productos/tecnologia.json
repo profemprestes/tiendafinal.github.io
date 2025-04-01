@@ -1,0 +1,37 @@
+[
+  {
+    "id": 201,
+    "nombre": "Smartwatch Ultra Connect Pro",
+    "precio": 249.99,
+    "imagen": "src/assets/images/Catalogo/1.webp",
+    "descripcion": "Reloj inteligente con pantalla AMOLED de alta resolución y monitoreo avanzado de salud. Incluye GPS integrado, resistencia al agua de 50m y batería de larga duración. El compañero perfecto para mantener tu vida conectada y saludable."
+  },
+  {
+    "id": 202,
+    "nombre": "Auriculares Noise Cancel Elite",
+    "precio": 179.50,
+    "imagen": "src/assets/images/Catalogo/2.webp",
+    "descripcion": "Auriculares inalámbricos con tecnología de cancelación de ruido adaptativa y sonido envolvente de alta fidelidad. Disfruta de hasta 30 horas de reproducción y comodidad premium con almohadillas de espuma con memoria. Sumérgete en tu música sin distracciones."
+  },
+  {
+    "id": 203,
+    "nombre": "Tablet ProView 11",
+    "precio": 399.99,
+    "imagen": "src/assets/images/Catalogo/3.webp",
+    "descripcion": "Tablet de última generación con pantalla Retina de 11 pulgadas y procesador ultrarrápido. Perfecta para trabajo, estudio o entretenimiento con su sistema de cuatro altavoces y compatibilidad con lápiz digital. Potencia y portabilidad en un diseño elegante y ligero."
+  },
+  {
+    "id": 204,
+    "nombre": "Altavoz Inteligente SoundSphere",
+    "precio": 129.95,
+    "imagen": "src/assets/images/Catalogo/4.webp",
+    "descripcion": "Altavoz con asistente virtual integrado y sonido 360° que llena cualquier habitación. Controla tu hogar inteligente, reproduce música en streaming y obtén respuestas instantáneas con comandos de voz. Diseño compacto y elegante que complementa cualquier espacio."
+  },
+  {
+    "id": 205,
+    "nombre": "Cámara Action Pro 4K",
+    "precio": 189.99,
+    "imagen": "src/assets/images/Catalogo/5.webp",
+    "descripcion": "Cámara de acción resistente al agua con grabación 4K a 60fps y estabilización avanzada de imagen. Captura tus aventuras más extremas con claridad cristalina y comparte al instante con conectividad WiFi. Incluye accesorios de montaje para cualquier situación."
+  }
+]

@@ -1,0 +1,300 @@
+# PRECIO HOGAR - CONFIGURATION FILES
+
+Project directory: G:\01-Tienda\certain-corot\tiendafinal
+Date: mar. 01/04/2025
+
+## package.json
+
+```
+{
+  "name": "precio-hogar",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "astro build && gh-pages -d dist",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.2",
+    "@astrojs/tailwind": "^5.0.2",
+    "@iconify-json/tabler": "^1.2.17",
+    "astro": "^5.5.5",
+    "astro-auto-import": "^0.4.4",
+    "astro-icon": "^1.1.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^3.3.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
+
+```
+
+## astro.config.mjs
+
+```
+import { defineConfig } from 'astro/config';
+import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
+
+// https://astro.build/config
+export default defineConfig({
+  integrations: [
+    tailwind(), 
+    react()
+  ],
+  site: 'https://profemprestes.github.io/tiendafinal.github.io',
+  base: '/',
+  build: {
+    assets: 'assets',  // Removed the leading slash
+    format: 'file'
+  }
+});
+```
+
+## tailwind.config.cjs
+
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+        },
+        secondary: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
+```
+
+## tsconfig.json
+
+```
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
+    }
+  }
+}
+
+
+```
+
+## .gitignore
+
+```
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# vscode
+.vscode
+
+# Astro
+.astro/
+
+
+```
+
+## public/robots.txt
+
+```
+User-agent: *
+Allow: /
+
+Sitemap: https://preciohogar.com/sitemap.xml
+
+
+```
+
+## public/sitemap.xml
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://preciohogar.com/</loc>
+    <lastmod>2023-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://preciohogar.com/productos</loc>
+    <lastmod>2023-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://preciohogar.com/nosotros</loc>
+    <lastmod>2023-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://preciohogar.com/contacto</loc>
+    <lastmod>2023-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
+
+
+```
+
+## .gitattributes
+
+```
+# Auto detect text files and perform LF normalization
+* text=auto
+
+```
+
+## Product Data Structure (sample from bazaryhogar.json)
+
+```json
+[
+  {
+    "id": 101,
+    "nombre": "Parlante Amazon Echo Dot",
+    "precio": 3150.0,
+    "imagen": "src/assets/images/Guardados/Parlante-Amazon-Echo-Dot.png",
+    "descripcion": "Parlante inteligente Amazon Echo Dot color azul. Compatible con Alexa, permite controlar dispositivos del hogar, reproducir música y responder preguntas mediante comandos de voz."
+  },
+  {
+    "id": 102,
+    "nombre": "Sopladora Mini",
+    "precio": 1776.0,
+    "imagen": "src/assets/images/Guardados/Sopladora-Mini.png",
+    "descripcion": "Sopladora Mini con Turbina x3a. Potente y compacta, ideal para limpieza de jardines, talleres y espacios exteriores. Diseño ergonómico y fácil de usar."
+  }
+]
+```
+
+## Project Structure
+
+```
+Directory structure of G:\01-Tienda\certain-corot\tiendafinal\src:
+
+src/
+    assets/
+        astro.svg
+        background.svg
+        logotienda.svg
+        logotiendaoscuro.svg
+        images/
+            bg1.jpg
+            bg2.jpg
+            category1.jpg
+            category2.jpg
+            category3.jpg
+            category4.jpg
+            category5.jpg
+            logotienda.svg
+            mirror.png
+            product1.jpg
+            product10.jpg
+            product11.jpg
+            product12.jpg
+            product13.jpg
+            product2.jpg
+            product3.jpg
+            product4.jpg
+            product5.jpg
+            product6.jpg
+            product7.jpg
+            product8.jpg
+            product9.jpg
+            suit-1.jpg
+            suit-2.jpg
+            suit-3.jpg
+            suit-4.jpg
+            suit-5.jpg
+            suit-6.jpg
+            team-1.jpg
+            team-2.jpg
+    components/
+        Footer.astro
+        Heroc.astro
+        Heroi.astro
+        Herop.astro
+        Heros.astro
+        Llamadacto.astro
+        Navbar.astro
+        ProductCard.astro
+        Valores.astro
+        equipos.astro
+        nuestrahistoria.astro
+    layouts/
+        Layout.astro
+    pages/
+        contacto.astro
+        index.astro
+        nosotros.astro
+        productos.astro
+    productos/
+        bazaryhogar.json
+        herramientas.json
+        jugueteria.json
+        tecnologia.json
+    styles/
+        global.css
+```

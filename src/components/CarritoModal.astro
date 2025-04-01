@@ -1,0 +1,93 @@
+---
+// Componente de modal para el carrito de compras
+---
+
+<div id="carritoModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+  <div class="flex items-center justify-center min-h-screen p-4">
+    <!-- Overlay de fondo oscuro -->
+    <div class="fixed inset-0 bg-black opacity-50" id="carritoModalOverlay"></div>
+    
+    <!-- Contenido del modal -->
+    <div class="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+      <!-- Encabezado del modal -->
+      <div class="flex items-center justify-between p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+        <h3 class="text-xl font-semibold text-gray-800">
+          <i class="fas fa-shopping-cart mr-2 text-primary-600"></i> Tu Carrito
+        </h3>
+        <button id="closeCarritoModal" class="text-gray-400 hover:text-gray-500 focus:outline-none">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+      
+      <!-- Contenido del carrito -->
+      <div class="p-4" id="carritoModalContent">
+        <!-- Este contenido se llenará dinámicamente con JavaScript -->
+        <div class="empty-cart-message text-center py-8 hidden">
+          <i class="fas fa-shopping-cart text-5xl text-primary-200 mb-4"></i>
+          <h4 class="text-xl font-semibold text-gray-700 mb-2">Tu carrito está vacío</h4>
+          <p class="text-gray-500 mb-6">Parece que aún no has agregado productos a tu carrito</p>
+          <button id="continuarComprando" class="btn-primary inline-flex items-center">
+            <i class="fas fa-shopping-bag mr-2"></i> Continuar comprando
+          </button>
+        </div>
+        
+        <!-- Lista de productos en el carrito -->
+        <div class="cart-items-container">
+          <div class="cart-items space-y-4"></div>
+          
+          <!-- Resumen del carrito -->
+          <div class="cart-summary mt-6 pt-4 border-t border-gray-200 hidden">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-gray-600">Subtotal:</span>
+              <span class="font-medium" id="modal-subtotal">$0.00</span>
+            </div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-gray-600">Envío:</span>
+              <span class="font-medium">Calculado en el siguiente paso</span>
+            </div>
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-lg font-semibold">Total:</span>
+              <span class="text-xl font-bold text-primary-700" id="modal-total">$0.00</span>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button id="vaciarCarritoModal" class="btn-secondary flex-1 flex items-center justify-center text-sm py-2">
+                <i class="fas fa-trash-alt mr-2"></i> Vaciar carrito
+              </button>
+              <a href="/carrito" class="btn-primary flex-1 flex items-center justify-center text-sm py-2">
+                <i class="fas fa-shopping-bag mr-2"></i> Ver carrito completo
+              </a>
+              <button id="finalizarCompraModal" class="btn-primary flex-1 flex items-center justify-center text-sm py-2">
+                <i class="fas fa-check-circle mr-2"></i> Finalizar compra
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #carritoModal {
+    transition: opacity 0.3s ease;
+  }
+  
+  #carritoModal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .cart-item-enter {
+    animation: slideIn 0.3s ease forwards;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

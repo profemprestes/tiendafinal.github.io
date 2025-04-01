@@ -6,7 +6,7 @@ import Logo from '../assets/logotienda.svg';
 <nav class="container mx-auto px-4 py-3" x-data="{ isOpen: false }">
   <div class="flex justify-between items-center">
     <div class="flex items-center">
-      <a href="/tiendafinal.github.io/" class="flex items-center">
+      <a href="/" class="flex items-center">
         <Image src={Logo} alt="PrecioHogar Logo" width={50} height={50} class="mr-2" />
         <span class="text-xl font-bold text-primary-600">PrecioHogar</span>
 </a>
@@ -20,16 +20,18 @@ import Logo from '../assets/logotienda.svg';
     </button>
     
     <div class="hidden md:flex space-x-8">
-      <a href="/tiendafinal.github.io" class="text-gray-600 hover:text-primary-600 transition duration-300">Inicio</a>
-      <a href="/tiendafinal.github.io/productos" class="text-gray-600 hover:text-primary-600 transition duration-300">Productos</a>
-      <a href="/tiendafinal.github.io/nosotros" class="text-gray-600 hover:text-primary-600 transition duration-300">Nosotros</a>
-      <a href="/tiendafinal.github.io/contacto" class="text-gray-600 hover:text-primary-600 transition duration-300">Contacto</a>
+      <a href="/" class="text-gray-600 hover:text-primary-600 transition duration-300">Inicio</a>
+      <a href="/productos" class="text-gray-600 hover:text-primary-600 transition duration-300">Productos</a>
+      <a href="/nosotros" class="text-gray-600 hover:text-primary-600 transition duration-300">Nosotros</a>
+      <a href="/faq" class="text-gray-600 hover:text-primary-600 transition duration-300">Preguntas Frecuentes</a>
+      <a href="/contacto" class="text-gray-600 hover:text-primary-600 transition duration-300">Contacto</a>
     </div>
     
     <div class="hidden md:flex items-center space-x-4">
-      <a href="/carrito" class="text-gray-600 hover:text-primary-600 transition duration-300">
+      <button class="cart-button text-gray-600 hover:text-primary-600 transition duration-300 relative">
         <i class="fas fa-shopping-cart"></i>
-      </a>
+        <span class="cart-counter hidden absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+      </button>
       <a href="/cuenta" class="text-gray-600 hover:text-primary-600 transition duration-300">
         <i class="fas fa-user"></i>
       </a>
@@ -43,14 +45,16 @@ import Logo from '../assets/logotienda.svg';
      x-transition:leave-start="opacity-100 scale-100" 
      x-transition:leave-end="opacity-0 scale-95"
      class="absolute top-full left-0 right-0 bg-white shadow-md md:hidden flex flex-col items-center py-4 space-y-4 z-50">
-    <a href="/tiendafinal.github.io" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Inicio</a>
-    <a href="/tiendafinal.github.io/productos" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Productos</a>
-    <a href="/tiendafinal.github.io/nosotros" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Nosotros</a>
-    <a href="/tiendafinal.github.io/contacto" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Contacto</a>
+    <a href="/" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Inicio</a>
+    <a href="/productos" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Productos</a>
+    <a href="/nosotros" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Nosotros</a>
+    <a href="/faq" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Preguntas Frecuentes</a>
+    <a href="/contacto" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Contacto</a>
     <div class="flex space-x-4 mt-2 px-4 py-2 w-full justify-center">
-      <a href="/carrito" class="text-gray-600 hover:text-primary-600 transition duration-300">
+      <button class="cart-button text-gray-600 hover:text-primary-600 transition duration-300 relative">
         <i class="fas fa-shopping-cart"></i>
-      </a>
+        <span class="cart-counter hidden absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+      </button>
       <a href="/cuenta" class="text-gray-600 hover:text-primary-600 transition duration-300">
         <i class="fas fa-user"></i>
       </a>

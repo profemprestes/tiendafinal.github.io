@@ -1,0 +1,37 @@
+[
+  {
+    "id": 301,
+    "nombre": "Set de Construcción Mega Blocks",
+    "precio": 59.99,
+    "imagen": "src/assets/images/product6.jpg",
+    "descripcion": "Set de 250 piezas de construcción compatibles con las principales marcas del mercado. Desarrolla la creatividad y habilidades motoras de los niños con bloques coloridos y resistentes. Incluye manual con ideas de proyectos y caja organizadora."
+  },
+  {
+    "id": 302,
+    "nombre": "Muñeca Interactiva SmartFriend",
+    "precio": 45.50,
+    "imagen": "src/assets/images/product12.jpg",
+    "descripcion": "Muñeca con más de 100 frases y respuestas interactivas que reacciona al tacto y la voz. Su cabello peinable y conjunto de ropa intercambiable fomentan el juego imaginativo. La compañera perfecta que estimula el desarrollo emocional y social."
+  },
+  {
+    "id": 303,
+    "nombre": "Drone Junior Explorer",
+    "precio": 89.99,
+    "imagen": "src/assets/images/product8.jpg",
+    "descripcion": "Drone para principiantes con control remoto intuitivo y sistema de estabilización automática. Incluye cámara HD para capturar fotos y videos desde el aire con hasta 15 minutos de vuelo. Diseñado con materiales resistentes a impactos para mayor durabilidad."
+  },
+  {
+    "id": 304,
+    "nombre": "Laboratorio de Ciencias Divertidas",
+    "precio": 39.95,
+    "imagen": "src/assets/images/product3.jpg",
+    "descripcion": "Kit científico con 30 experimentos seguros y educativos para despertar la curiosidad por la ciencia. Incluye todos los materiales necesarios y guía ilustrada paso a paso. Transforma la habitación de tu hijo en un laboratorio de descubrimientos fascinantes."
+  },
+  {
+    "id": 305,
+    "nombre": "Pista de Carreras Extreme Challenge",
+    "precio": 74.99,
+    "imagen": "src/assets/images/product13.jpg",
+    "descripcion": "Circuito de carreras con loops, curvas y obstáculos que se iluminan en la oscuridad. Incluye dos autos de alta velocidad con efectos de sonido realistas. Montaje modular que permite crear diferentes configuraciones para horas interminables de diversión."
+  }
+]

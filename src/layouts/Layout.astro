@@ -1,13 +1,16 @@
 ---
 import Navbar from '@components/Navbar.astro';
 import Footer from '@components/Footer.astro';
+import CarritoModal from '@components/CarritoModal.astro';
+// Import the global CSS file that includes Tailwind
 import '../styles/global.css';
+
 export interface Props {
   title: string;
-  description: string;
+  description?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description = "PrecioHogar - Tu tienda online de confianza para productos del hogar" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -21,6 +24,7 @@ const { title, description } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="/main.js" is:inline></script>
+    <script src="/carrito-modal.js" is:inline></script>
   </head>
   <body class="font-sans text-gray-800 bg-white">
     <header class="sticky top-0 z-50 bg-white shadow-md">
@@ -30,6 +34,9 @@ const { title, description } = Astro.props;
     <slot />
 
   <Footer />
+    
+    <!-- Modal del carrito -->
+    <CarritoModal />
 
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   </body>

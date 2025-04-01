@@ -1,0 +1,198 @@
+[
+  {
+    "id": 101,
+    "nombre": "Parlante Amazon Echo Dot",
+    "precio": 3150.00,
+    "imagen": "src/assets/images/Guardados/Parlante-Amazon-Echo-Dot.png",
+    "descripcion": "Parlante inteligente Amazon Echo Dot color azul. Compatible con Alexa, permite controlar dispositivos del hogar, reproducir música y responder preguntas mediante comandos de voz."
+  },
+  {
+    "id": 102,
+    "nombre": "Sopladora Mini",
+    "precio": 1776.00,
+    "imagen": "src/assets/images/Guardados/Sopladora-Mini.png",
+    "descripcion": "Sopladora Mini con Turbina x3a. Potente y compacta, ideal para limpieza de jardines, talleres y espacios exteriores. Diseño ergonómico y fácil de usar."
+  },
+  {
+    "id": 103,
+    "nombre": "Parlante Bluetooth",
+    "precio": 426.00,
+    "imagen": "src/assets/images/Guardados/Parlante Bluetooth.png",
+    "descripcion": "Parlante Bluetooth multifunción con linterna integrada, puerto USB, ranura para tarjeta microSD y radio FM. Perfecto para llevar tu música a todas partes."
+  },
+  {
+    "id": 104,
+    "nombre": "Botella Brio 500ml",
+    "precio": 764.00,
+    "imagen": "src/assets/images/Guardados/botella-brio-blanca.webp",
+    "descripcion": "Botella Brio de 500ml en color blanco. Fabricada con materiales de alta calidad, mantiene tus bebidas a la temperatura ideal. Diseño elegante y práctico para uso diario."
+  },
+  {
+    "id": 105,
+    "nombre": "Lapiz Premium para torno",
+    "precio": 1098.00,
+    "imagen": "src/assets/images/Guardados/lapiz-torno.webp",
+    "descripcion": "Lápiz Premium para torno de uñas con conector Plug. Herramienta profesional para manicura y pedicura, ideal para salones de belleza o uso doméstico."
+  },
+  {
+    "id": 106,
+    "nombre": "Mochila Chuwi",
+    "precio": 810.00,
+    "imagen": "src/assets/images/Guardados/mochila-chuwi.webp",
+    "descripcion": "Mochila Chuwi color azul para laptops de hasta 15,6 pulgadas. Múltiples compartimentos, material resistente al agua y diseño ergonómico para mayor comodidad."
+  },
+  {
+    "id": 107,
+    "nombre": "Maquina Corta pelo Kemel",
+    "precio": 998.00,
+    "imagen": "src/assets/images/Guardados/cortapelo-mascota.webp",
+    "descripcion": "Máquina corta pelo Kemel especial para mascotas. Potente motor, cuchillas de acero inoxidable y diferentes peines guía para un corte profesional en casa."
+  },
+  {
+    "id": 108,
+    "nombre": "Buclera Sokany",
+    "precio": 650.00,
+    "imagen": "src/assets/images/Guardados/buclera-sokany.webp",
+    "descripcion": "Buclera Sokany para crear rizos perfectos. Calentamiento rápido, control de temperatura y revestimiento cerámico que protege el cabello del daño por calor."
+  },
+  {
+    "id": 109,
+    "nombre": "Botella Brio 500ml Negra",
+    "precio": 764.00,
+    "imagen": "src/assets/images/Guardados/botella-brio-negra.webp",
+    "descripcion": "Botella Brio de 500ml en color negro. Mantiene tus bebidas frías o calientes por horas. Diseño elegante y práctico, ideal para deportistas y uso diario."
+  },
+  {
+    "id": 110,
+    "nombre": "Sandwichera Niza",
+    "precio": 1000.00,
+    "imagen": "src/assets/images/Guardados/sandwichera-niza.webp",
+    "descripcion": "Sandwichera Niza con placas antiadherentes. Prepara deliciosos sándwiches tostados en minutos. Indicador luminoso y sistema de seguridad contra sobrecalentamiento."
+  },
+  {
+    "id": 111,
+    "nombre": "Planchita Sokany",
+    "precio": 800.00,
+    "imagen": "src/assets/images/Guardados/planchita-sokany.webp",
+    "descripcion": "Planchita Sokany para alisado profesional. Placas de cerámica que protegen el cabello, calentamiento rápido y control de temperatura ajustable."
+  },
+  {
+    "id": 112,
+    "nombre": "Brochetera Sokany",
+    "precio": 1500.00,
+    "imagen": "src/assets/images/Guardados/brochetera-sokany.webp",
+    "descripcion": "Brochetera Sokany para preparar deliciosas brochetas en casa. Superficie antiadherente, fácil limpieza y diseño compacto para ahorrar espacio."
+  },
+  {
+    "id": 113,
+    "nombre": "Tostadora Sonifer",
+    "precio": 1110.00,
+    "imagen": "src/assets/images/Guardados/tostadora-sonifer.webp",
+    "descripcion": "Tostadora Sonifer con ranuras extra anchas y control de tostado ajustable. Bandeja recogemigas extraíble para fácil limpieza y función de cancelación."
+  },
+  {
+    "id": 114,
+    "nombre": "Cortadora de Pelo Premium Sonifer",
+    "precio": 998.00,
+    "imagen": "src/assets/images/Guardados/cortapelo-sonifer.webp",
+    "descripcion": "Cortadora de Pelo Premium Sonifer con cuchillas de acero inoxidable y motor potente. Incluye accesorios para diferentes estilos de corte y estuche para guardar."
+  },
+  {
+    "id": 115,
+    "nombre": "Zapatero 5 Pisos Con Perchero",
+    "precio": 768.00,
+    "imagen": "src/assets/images/Guardados/zapatero-perchero.webp",
+    "descripcion": "Zapatero de 5 pisos con perchero integrado. Organiza tu calzado y ropa en un solo mueble. Fácil montaje y diseño moderno que se adapta a cualquier espacio."
+  },
+  {
+    "id": 116,
+    "nombre": "Grill Electrico Sonifer",
+    "precio": 2000.00,
+    "imagen": "src/assets/images/Guardados/grill-sonifer.webp",
+    "descripcion": "Grill Eléctrico Sonifer con placas antiadherentes y control de temperatura ajustable. Prepara carnes, verduras y sándwiches a la parrilla de forma saludable y rápida."
+  },
+  {
+    "id": 117,
+    "nombre": "Bicicleta Fija",
+    "precio": 1256.00,
+    "imagen": "src/assets/images/Guardados/bicicleta-fija.webp",
+    "descripcion": "Bicicleta fija para ejercicio en casa. Resistencia ajustable, asiento cómodo y monitor que muestra calorías, distancia y tiempo. Ideal para mantenerse en forma."
+  },
+  {
+    "id": 118,
+    "nombre": "Secador de Pelo Mi Water",
+    "precio": 3268.00,
+    "imagen": "src/assets/images/Guardados/secador-miwater.webp",
+    "descripcion": "Secador de Pelo Mi Water de alta potencia. Tecnología iónica que reduce el frizz, múltiples niveles de temperatura y velocidad, y diseño ergonómico."
+  },
+  {
+    "id": 119,
+    "nombre": "Prensa para Hamburguesas",
+    "precio": 488.00,
+    "imagen": "src/assets/images/Guardados/prensa-hamburguesas.webp",
+    "descripcion": "Prensa para Hamburguesas de acero inoxidable. Crea hamburguesas perfectas y uniformes fácilmente. Duradera y fácil de limpiar, ideal para barbacoas."
+  },
+  {
+    "id": 120,
+    "nombre": "Exprimidor de Jugos",
+    "precio": 1120.00,
+    "imagen": "src/assets/images/Guardados/exprimidor-jugos.webp",
+    "descripcion": "Exprimidor de Jugos eléctrico con filtro para pulpa y boquilla antigoteo. Extrae el máximo jugo de cítricos y otras frutas de forma rápida y eficiente."
+  },
+  {
+    "id": 121,
+    "nombre": "Batidora Niza",
+    "precio": 1202.00,
+    "imagen": "src/assets/images/Guardados/batidora-niza.webp",
+    "descripcion": "Batidora Niza con múltiples velocidades y accesorios. Potente motor para batir, mezclar y amasar. Diseño ergonómico y fácil de usar para todas tus recetas."
+  },
+  {
+    "id": 122,
+    "nombre": "Licuadora Niza",
+    "precio": 1482.00,
+    "imagen": "src/assets/images/Guardados/licuadora-niza.webp",
+    "descripcion": "Licuadora Niza con vaso de vidrio resistente y cuchillas de acero inoxidable. Múltiples velocidades para preparar batidos, salsas y sopas con resultados perfectos."
+  },
+  {
+    "id": 123,
+    "nombre": "Licuadora Trituradora Boma",
+    "precio": 1682.00,
+    "imagen": "src/assets/images/Guardados/licuadora-boma.webp",
+    "descripcion": "Licuadora Trituradora Boma de alta potencia. Tritura hielo y alimentos duros con facilidad. Vaso de gran capacidad y motor duradero para uso frecuente."
+  },
+  {
+    "id": 124,
+    "nombre": "Licuadora Classic Niza",
+    "precio": 1164.00,
+    "imagen": "src/assets/images/Guardados/licuadora-classic.webp",
+    "descripcion": "Licuadora Classic Niza con diseño tradicional y funcionalidad moderna. Perfecta para preparar batidos, salsas y purés con resultados consistentes."
+  },
+  {
+    "id": 125,
+    "nombre": "Licuadora Niza Acero",
+    "precio": 1634.00,
+    "imagen": "src/assets/images/Guardados/licuadora-acero.webp",
+    "descripcion": "Licuadora Niza con acabado en acero inoxidable. Elegante y potente, con múltiples velocidades y función pulso para un control preciso en tus preparaciones."
+  },
+  {
+    "id": 126,
+    "nombre": "Batidora Niza con bowl",
+    "precio": 1202.00,
+    "imagen": "src/assets/images/Guardados/batidora-bowl.webp",
+    "descripcion": "Batidora Niza con bowl giratorio incluido. Ideal para preparar masas, cremas y merengues. Set completo con diferentes accesorios para diversas preparaciones."
+  },
+  {
+    "id": 127,
+    "nombre": "Secador de Pelo Sonifer",
+    "precio": 1200.00,
+    "imagen": "src/assets/images/Guardados/secador-sonifer.webp",
+    "descripcion": "Secador de Pelo Sonifer con tecnología iónica y múltiples ajustes de temperatura. Secado rápido y eficiente que protege el cabello del daño por calor."
+  },
+  {
+    "id": 128,
+    "nombre": "Jarra Electrica",
+    "precio": 978.00,
+    "imagen": "src/assets/images/Guardados/jarra-electrica.webp",
+    "descripcion": "Jarra Eléctrica de rápido calentamiento con apagado automático. Capacidad de 1.7 litros, indicador de nivel de agua y filtro antical para agua más pura."
+  }
+]

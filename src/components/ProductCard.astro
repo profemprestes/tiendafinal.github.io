@@ -41,7 +41,7 @@ const { id, name, price, oldPrice, rating, reviews, category, description, image
       <span class="price">${price}</span>
       {oldPrice && <span class="old-price ml-2">${oldPrice}</span>}
     </div>
-    <button class="btn-primary w-full add-to-cart" data-product-id={id} data-product-name={name} data-product-price={price}>
+    <button class="btn-primary w-full add-to-cart" data-product-id={id} data-product-name={name} data-product-price={price} data-product-image={image} data-product-category={category}>
       Añadir al carrito
     </button>
   </div>

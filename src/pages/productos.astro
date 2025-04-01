@@ -3,239 +3,131 @@ import Layout from '../layouts/Layout.astro';
 import ProductCard from '../components/ProductCard.astro';
 import Herop from '@components/Herop.astro';
 
-// Mock products data - in a real app this would come from a database or API
-const products = [
-  {
-    id: "1",
-    name: "Lavadora Smart Plus",
-    price: 599,
-    oldPrice: 749,
+// Import JSON data from each category
+import tecnologiaData from '../productos/tecnologia.json';
+import bazaryhogarData from '../productos/bazaryhogar.json';
+import herramientasData from '../productos/herramientas.json';
+import jugueteriaData from '../productos/jugueteria.json';
+import pruebasData from '../productos/pruebas.json';
+
+// Combine all products and format them to match the ProductCard component
+const allProducts = [
+  ...tecnologiaData.map(item => ({
+    id: item.id.toString(),
+    name: item.nombre,
+    price: item.precio,
     rating: 4.5,
-    reviews: 42,
-    category: "electrodomesticos",
-    description: "Lavadora de carga frontal con tecnología EcoWash y 10 programas",
-    image: "/images/products/placeholder.svg",
-    badge: "-20%"
-  },
-  {
-    id: "2",
-    name: "Horno Eléctrico Pro",
-    price: 329,
-    oldPrice: 389,
-    rating: 5,
-    reviews: 36,
-    category: "cocina",
-    description: "Horno de convección con pantalla digital y múltiples funciones de cocción",
-    image: "/images/products/placeholder.svg",
-    badge: "-15%"
-  },
-  {
-    id: "3",
-    name: "Smart TV 55\" UHD",
-    price: 899,
-    rating: 4.5,
-    reviews: 28,
+    reviews: Math.floor(Math.random() * 50) + 10,
     category: "tecnologia",
-    description: "Televisor LED Ultra HD 4K con sistema operativo inteligente y asistente de voz",
-    image: "/images/products/placeholder.svg",
-    badge: "Nuevo"
-  },
-  {
-    id: "4",
-    name: "Sofá Modular Comfort",
-    price: 749,
-    oldPrice: 999,
-    rating: 4,
-    reviews: 19,
-    category: "muebles",
-    description: "Sofá de 3 plazas con chaise longue y tapizado de alta resistencia",
-    image: "/images/products/placeholder.svg",
-    badge: "-25%"
-  },
-  {
-    id: "5",
-    name: "Refrigerador French Door",
-    price: 1299,
-    oldPrice: 1499,
-    rating: 4.7,
-    reviews: 53,
-    category: "electrodomesticos",
-    description: "Refrigerador de gran capacidad con dispensador de agua y hielo",
-    image: "/images/products/placeholder.svg",
-    badge: "-13%"
-  },
-  {
-    id: "6",
-    name: "Cafetera Automática",
-    price: 199,
-    rating: 4.2,
-    reviews: 31,
-    category: "cocina",
-    description: "Cafetera con molinillo integrado y múltiples opciones de preparación",
-    image: "/images/products/placeholder.svg"
-  },
-  {
-    id: "7",
-    name: "Tablet Pro 11\"",
-    price: 449,
-    oldPrice: 499,
-    rating: 4.6,
-    reviews: 47,
-    category: "tecnologia",
-    description: "Tablet de alta gama con pantalla de retina y procesador avanzado",
-    image: "/images/products/placeholder.svg",
-    badge: "-10%"
-  },
-  {
-    id: "8",
-    name: "Mesa de Centro Moderna",
-    price: 199,
+    description: item.descripcion.substring(0, 80) + "...",
+    image: item.imagen,
+    badge: Math.random() > 0.5 ? "-" + (Math.floor(Math.random() * 20) + 5) + "%" : ""
+  })),
+  ...bazaryhogarData.map(item => ({
+    id: item.id.toString(),
+    name: item.nombre,
+    price: item.precio,
     rating: 4.3,
-    reviews: 24,
-    category: "muebles",
-    description: "Mesa de centro con diseño contemporáneo y materiales de alta calidad",
-    image: "/images/products/placeholder.svg"
-  },
-  {
-    id: "9",
-    name: "Aspiradora Robot Smart",
-    price: 299,
-    oldPrice: 399,
+    reviews: Math.floor(Math.random() * 50) + 10,
+    category: "bazaryhogar",
+    description: item.descripcion.substring(0, 80) + "...",
+    image: item.imagen,
+    badge: Math.random() > 0.5 ? "-" + (Math.floor(Math.random() * 20) + 5) + "%" : ""
+  })),
+  ...herramientasData.map(item => ({
+    id: item.id.toString(),
+    name: item.nombre,
+    price: item.precio,
+    rating: 4.6,
+    reviews: Math.floor(Math.random() * 50) + 10,
+    category: "herramientas",
+    description: item.descripcion.substring(0, 80) + "...",
+    image: item.imagen,
+    badge: Math.random() > 0.5 ? "-" + (Math.floor(Math.random() * 20) + 5) + "%" : ""
+  })),
+  ...jugueteriaData.map(item => ({
+    id: item.id.toString(),
+    name: item.nombre,
+    price: item.precio,
     rating: 4.4,
-    reviews: 62,
-    category: "electrodomesticos",
-    description: "Robot aspirador con mapeo inteligente y control por app",
-    image: "/images/products/placeholder.svg",
-    badge: "-25%"
-  },
-  {
-    id: "10",
-    name: "Licuadora Profesional",
-    price: 159,
-    rating: 4.8,
-    reviews: 45,
-    category: "cocina",
-    description: "Licuadora de alto rendimiento con 6 velocidades y vaso de vidrio",
-    image: "/images/products/placeholder.svg"
-  },
-  {
-    id: "11",
-    name: "Soundbar Premium",
-    price: 249,
-    oldPrice: 299,
-    rating: 4.6,
-    reviews: 33,
-    category: "tecnologia",
-    description: "Barra de sonido con subwoofer inalámbrico y Bluetooth",
-    image: "/images/products/placeholder.svg",
-    badge: "-17%"
-  },
-  {
-    id: "12",
-    name: "Silla Ergonómica",
-    price: 179,
-    rating: 4.5,
-    reviews: 38,
-    category: "muebles",
-    description: "Silla de oficina ajustable con soporte lumbar",
-    image: "/images/products/placeholder.svg"
-  },
-  {
-    id: "13",
-    name: "Microondas Digital",
-    price: 129,
-    oldPrice: 159,
-    rating: 4.3,
-    reviews: 51,
-    category: "electrodomesticos",
-    description: "Microondas con panel táctil y múltiples funciones de cocción",
-    image: "/images/products/placeholder.svg",
-    badge: "-19%"
-  },
-  {
-    id: "14",
-    name: "Batidora Stand Mixer",
-    price: 229,
-    rating: 4.7,
-    reviews: 29,
-    category: "cocina",
-    description: "Batidora de pie con bowl de acero inoxidable y accesorios",
-    image: "/images/products/placeholder.svg"
-  },
-  {
-    id: "15",
-    name: "Smart Watch Pro",
-    price: 199,
-    oldPrice: 249,
-    rating: 4.4,
-    reviews: 56,
-    category: "tecnologia",
-    description: "Reloj inteligente con monitor cardíaco y GPS integrado",
-    image: "/images/products/placeholder.svg",
-    badge: "-20%"
-  },
-  {
-    id: "16",
-    name: "Estantería Modular",
-    price: 159,
-    rating: 4.2,
-    reviews: 41,
-    category: "muebles",
-    description: "Estantería personalizable con módulos ajustables",
-    image: "/images/products/placeholder.svg"
-  },
-  {
-    id: "17",
-    name: "Ventilador Torre",
-    price: 89,
-    oldPrice: 109,
-    rating: 4.3,
-    reviews: 47,
-    category: "electrodomesticos",
-    description: "Ventilador de torre oscilante con control remoto",
-    image: "/images/products/placeholder.svg",
-    badge: "-18%"
-  },
-  {
-    id: "18",
-    name: "Freidora de Aire",
-    price: 119,
-    rating: 4.6,
-    reviews: 73,
-    category: "cocina",
-    description: "Freidora de aire digital con 8 programas preestablecidos",
-    image: "/images/products/placeholder.svg"
-  }
+    reviews: Math.floor(Math.random() * 50) + 10,
+    category: "jugueteria",
+    description: item.descripcion.substring(0, 80) + "...",
+    image: item.imagen,
+    badge: Math.random() > 0.5 ? "-" + (Math.floor(Math.random() * 20) + 5) + "%" : ""
+  })),
+  ...pruebasData.map(item => {
+    // Create a properly formatted image path
+    let imagePath = item.imagen;
+    
+    // If the image path doesn't start with a slash, add one
+    if (!imagePath.startsWith('/')) {
+      imagePath = '/' + imagePath;
+    }
+    
+    return {
+      id: item.id.toString(),
+      name: item.nombre,
+      price: item.precio,
+      rating: 4.7,
+      reviews: Math.floor(Math.random() * 50) + 10,
+      category: "pruebas",
+      description: item.descripcion.substring(0, 80) + "...",
+      image: imagePath,
+      badge: Math.random() > 0.5 ? "-" + (Math.floor(Math.random() * 20) + 5) + "%" : ""
+    };
+  })
 ];
 
-// Get unique categories
-const categories = ["all", ...new Set(products.map(product => product.category))];
+// Get unique categories and add "all" option
+const categories = ["all", ...new Set(allProducts.map(product => product.category))];
+
+// Category translations for display
+const categoryTranslations = {
+  "all": "Todos",
+  "tecnologia": "Tecnología",
+  "bazaryhogar": "Bazar y Hogar",
+  "herramientas": "Herramientas",
+  "jugueteria": "Juguetería",
+  "pruebas": "Productos Destacados"
+};
 ---
 
-<Layout title="Productos | PrecioHogar" description="Explora nuestra amplia selección de electrodomésticos y artículos para el hogar con los mejores precios y facilidades de pago.">
+<Layout title="Productos | PrecioHogar" description="Explora nuestra amplia selección de productos para el hogar, tecnología, herramientas y juguetes con los mejores precios y facilidades de pago.">
   <main>
-    <Herop message="Explore our products" />
+    <Herop message="Nuestros Productos" />
 
-    <section id="filtros" class="py-12 bg-white">
+    <section id="filtros" class="py-12 bg-gradient-to-b from-white to-primary-50">
       <div class="container mx-auto px-4">
         <!-- Filter Buttons -->
-        <h2 class="text-2xl font-bold text-primary-700 mb-6">Filtrar por categoría</h2>
-        <div class="mb-10 flex flex-wrap gap-3">
+        <h2 class="text-3xl font-bold text-primary-700 mb-8 text-center">Explora por Categoría</h2>
+        <div class="mb-12 flex flex-wrap justify-center gap-4">
           {categories.map((category, index) => (
             <button 
-              class={`filter-button px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${index === 0 ? 'bg-primary-600 text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-sm'}`}
+              class={`filter-button px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${index === 0 ? 'bg-primary-600 text-white shadow-lg' : 'bg-white text-primary-700 border border-primary-200 shadow-sm hover:bg-primary-50'}`}
               data-category={category === "all" ? "all" : category}
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {categoryTranslations[category as keyof typeof categoryTranslations] || category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
           ))}
         </div>
 
         <!-- Products Grid -->
         <div id="productos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {products.map(product => (
-            <ProductCard {...product} />
+          {allProducts.map(product => (
+            <div class="product-card" data-category={product.category}>
+              <ProductCard {...product} />
+            </div>
           ))}
+        </div>
+        
+        <!-- No Results Message (hidden by default) -->
+        <div id="no-results" class="hidden text-center py-16">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-primary-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="text-xl font-semibold text-gray-700 mb-2">No se encontraron productos</h3>
+          <p class="text-gray-500">Intenta con otra categoría o revisa más tarde.</p>
         </div>
       </div>
     </section>
@@ -247,34 +139,195 @@ const categories = ["all", ...new Set(products.map(product => product.category))
   document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-button');
     const productCards = document.querySelectorAll('.product-card');
+    const noResults = document.getElementById('no-results');
     
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
         // Remove active class from all buttons
         filterButtons.forEach(btn => {
-          btn.classList.remove('bg-primary-600', 'text-white', 'shadow-md');
-          btn.classList.add('bg-gray-100', 'text-gray-700');
+          btn.classList.remove('bg-primary-600', 'text-white', 'shadow-lg');
+          btn.classList.add('bg-white', 'text-primary-700', 'border', 'border-primary-200');
         });
         
         // Add active class to clicked button
-        button.classList.remove('bg-gray-100', 'text-gray-700');
-        button.classList.add('bg-primary-600', 'text-white', 'shadow-md');
+        button.classList.remove('bg-white', 'text-primary-700', 'border', 'border-primary-200');
+        button.classList.add('bg-primary-600', 'text-white', 'shadow-lg');
         
         const category = button.getAttribute('data-category');
+        let visibleCount = 0;
         
         // Filter products
         productCards.forEach(card => {
           if (category === 'all') {
             (card as HTMLElement).style.display = 'block';
+            visibleCount++;
           } else {
             if (card.getAttribute('data-category') === category) {
               (card as HTMLElement).style.display = 'block';
+              visibleCount++;
             } else {
               (card as HTMLElement).style.display = 'none';
             }
           }
         });
+        
+        // Show/hide no results message
+        if (visibleCount === 0 && noResults) {
+          noResults.classList.remove('hidden');
+        } else if (noResults) {
+          noResults.classList.add('hidden');
+        }
+        
+        // Smooth scroll to products section
+        document.getElementById('productos')?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       });
     });
+    
+    // Add animation to product cards
+    productCards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('animate-fadeIn');
+      }, 100 * index);
+    });
+
+    // Carrito de compras - Funcionalidad para añadir productos
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const productId = button.getAttribute('data-product-id');
+        const productName = button.getAttribute('data-product-name');
+        const productPrice = parseFloat(button.getAttribute('data-product-price') || '0');
+        const productImage = button.getAttribute('data-product-image');
+        const productCategory = button.getAttribute('data-product-category');
+        
+        // Obtener el carrito actual o crear uno nuevo
+        const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
+        
+        // Verificar si el producto ya está en el carrito
+        const existingProductIndex = carrito.findIndex((item: { id: string | null }) => item.id === productId);
+        
+        if (existingProductIndex !== -1) {
+          // Si el producto ya está en el carrito, incrementar la cantidad
+          carrito[existingProductIndex].quantity += 1;
+        } else {
+          // Si el producto no está en el carrito, añadirlo
+          carrito.push({
+            id: productId,
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            quantity: 1,
+            category: productCategory
+          });
+        }
+        
+        // Guardar el carrito actualizado en localStorage
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        
+        // Mostrar notificación
+        showNotification(`${productName} añadido al carrito`);
+        
+        // Disparar evento para actualizar contador del carrito
+        document.dispatchEvent(new CustomEvent('carritoUpdated'));
+        
+        // Abrir modal del carrito después de un breve retraso
+        setTimeout(() => {
+          const carritoModal = document.getElementById('carritoModal');
+          if (carritoModal) {
+            carritoModal.classList.remove('hidden');
+            carritoModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            // Actualizar contenido del modal
+            const event = new CustomEvent('updateCarritoModal');
+            document.dispatchEvent(event);
+          }
+        }, 300);
+      });
+    });
+    
+    // Función para mostrar notificación
+    function showNotification(message: string) {
+      // Verificar si ya existe una notificación
+      let notification = document.querySelector('.cart-notification');
+      
+      if (!notification) {
+        // Crear elemento de notificación
+        notification = document.createElement('div');
+        notification.className = 'cart-notification fixed top-20 right-4 bg-primary-600 text-white py-2 px-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+        notification.textContent = message;
+        document.body.appendChild(notification);
+      } else {
+        notification.textContent = message;
+      }
+      
+      // Mostrar la notificación
+      setTimeout(() => {
+        notification.classList.remove('translate-x-full');
+      }, 10);
+      
+      // Ocultar la notificación después de 3 segundos
+      setTimeout(() => {
+        notification.classList.add('translate-x-full');
+        
+        // Eliminar la notificación del DOM después de la transición
+        setTimeout(() => {
+          notification.remove();
+        }, 300);
+      }, 3000);
+    }
   });
 </script>
+
+<style>
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .product-card {
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-button {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .filter-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+  .filter-button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(20, 20);
+      opacity: 0;
+    }
+  }
+</style>

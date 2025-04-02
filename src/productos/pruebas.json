@@ -2,112 +2,112 @@
   {
     "id": 501,
     "nombre": "Secador de Pelo Mi Water H500",
-    "precio": 3268.00,
+    "precio": 3268.0,
     "imagen": "src/assets/images/Catalogo/1.webp",
     "descripcion": "Secador profesional con tecnología iónica que reduce el frizz y protege el cabello. Cuenta con 3 niveles de temperatura, 2 velocidades y función de aire frío para fijar el peinado. Su diseño ergonómico y ligero facilita su uso prolongado."
   },
   {
     "id": 502,
     "nombre": "Prensa para Hamburguesas Premium",
-    "precio": 488.00,
+    "precio": 488.0,
     "imagen": "src/assets/images/Catalogo/2.webp",
     "descripcion": "Prensa de aluminio fundido para crear hamburguesas perfectas y uniformes. Su diseño antiadherente permite desmoldar fácilmente y cuenta con marcador de centro para cocción óptima. Ideal para preparar hamburguesas caseras profesionales."
   },
   {
     "id": 503,
     "nombre": "Exprimidor de Jugos Automático",
-    "precio": 1120.00,
+    "precio": 1120.0,
     "imagen": "src/assets/images/Catalogo/3.webp",
     "descripcion": "Exprimidor eléctrico con sistema de presión que extrae hasta la última gota de jugo. Incluye filtro para pulpa ajustable, motor silencioso de 100W y boquilla antigoteo. Desmontable para fácil limpieza y apto para lavavajillas."
   },
   {
     "id": 504,
     "nombre": "Android TV Xiaomi 4K UHD",
-    "precio": 2762.00,
+    "precio": 2762.0,
     "imagen": "src/assets/images/Catalogo/android-tv.jpg",
     "descripcion": "Smart TV con sistema Android integrado, resolución 4K Ultra HD y tecnología HDR10+. Disfruta de Netflix, YouTube y miles de aplicaciones con su interfaz intuitiva. Incluye control remoto con comando de voz y Chromecast integrado."
   },
   {
     "id": 505,
     "nombre": "Batidora Niza Multifunción",
-    "precio": 1202.00,
+    "precio": 1202.0,
     "imagen": "src/assets/images/Catalogo/batidora-bowl.jpg",
     "descripcion": "Batidora de mano con 5 velocidades y función turbo para resultados perfectos. Sus varillas de acero inoxidable garantizan durabilidad y eficiencia. Diseño ergonómico con agarre antideslizante y sistema de expulsión de accesorios con un solo botón."
   },
   {
     "id": 506,
     "nombre": "Licuadora Niza Power Blend",
-    "precio": 1482.00,
+    "precio": 1482.0,
     "imagen": "src/assets/images/Catalogo/licuadora-vintage.jpg",
     "descripcion": "Licuadora de alto rendimiento con motor de 600W y 6 cuchillas de acero inoxidable. Su jarra de vidrio templado de 1.5L resiste cambios de temperatura. Incluye 5 velocidades y función pulse para mayor control en tus preparaciones."
   },
   {
     "id": 507,
     "nombre": "Licuadora Trituradora Boma Pro",
-    "precio": 1682.00,
+    "precio": 1682.0,
     "imagen": "src/assets/images/Catalogo/licuadora-boma.jpg",
     "descripcion": "Potente licuadora trituradora con tecnología de cuchillas cruzadas que pulveriza hasta los ingredientes más duros. Ideal para batidos, sopas y salsas con su motor de 800W. Sistema de seguridad con bloqueo y base antideslizante."
   },
   {
     "id": 508,
     "nombre": "Licuadora Classic Niza Vintage",
-    "precio": 1164.00,
+    "precio": 1164.0,
     "imagen": "src/assets/images/Catalogo/licuadora-vintage.jpg",
     "descripcion": "Licuadora de diseño retro con prestaciones modernas. Jarra de vidrio de 1.25L con medidor integrado y tapa hermética con dosificador. Su motor de 550W garantiza un funcionamiento eficiente para todas tus recetas."
   },
   {
     "id": 509,
     "nombre": "Licuadora Niza Acero Inoxidable",
-    "precio": 1634.00,
+    "precio": 1634.0,
     "imagen": "src/assets/images/Catalogo/licuadora-acero.jpg",
     "descripcion": "Elegante licuadora con base de acero inoxidable y jarra de vidrio reforzado. Cuenta con 3 velocidades preestablecidas y función pulse para mayor precisión. Su sistema de cuchillas removibles facilita la limpieza y mantenimiento."
   },
   {
     "id": 510,
     "nombre": "Batidora Nizza con Bowl Giratorio",
-    "precio": 1202.00,
+    "precio": 1202.0,
     "imagen": "src/assets/images/Catalogo/batidora-bowl.jpg",
     "descripcion": "Batidora de pedestal con bowl de acero inoxidable de 3.5L y sistema de rotación planetaria. Incluye 3 accesorios: batidor, gancho para masa y paleta mezcladora. Sus 6 velocidades permiten preparar desde merengues hasta masas pesadas."
   },
   {
     "id": 511,
     "nombre": "Balanza Electrónica Digital Precision",
-    "precio": 1500.00,
+    "precio": 1500.0,
     "imagen": "src/assets/images/Catalogo/balanza-digital.jpg",
     "descripcion": "Balanza de cocina con precisión de 1g y capacidad de hasta 10kg. Pantalla LCD retroiluminada, función de tara y conversión de unidades. Su diseño ultradelgado en acero inoxidable es fácil de limpiar y almacenar."
   },
   {
     "id": 512,
     "nombre": "Calentador de Cera Prowax Profesional",
-    "precio": 598.00,
+    "precio": 598.0,
     "imagen": "src/assets/images/Catalogo/calentador-cera.jpg",
     "descripcion": "Calentador de cera con control de temperatura ajustable y sistema de calentamiento rápido. Su recipiente removible facilita la limpieza y cuenta con tapa transparente para visualizar el proceso. Ideal para uso doméstico o profesional."
   },
   {
     "id": 513,
     "nombre": "Parlante Multimedia Bluetooth 360°",
-    "precio": 1590.00,
+    "precio": 1590.0,
     "imagen": "src/assets/images/Catalogo/parlante-bluetooth.jpg",
     "descripcion": "Parlante portátil con sonido envolvente 360° y potencia de 20W. Conectividad Bluetooth 5.0, entrada auxiliar y ranura para tarjeta SD. Su batería recargable ofrece hasta 12 horas de reproducción y cuenta con luces LED multicolor."
   },
   {
     "id": 514,
     "nombre": "Secador de Pelo Sonifer Profesional",
-    "precio": 1200.00,
+    "precio": 1200.0,
     "imagen": "src/assets/images/Catalogo/secador-sonifer.jpg",
     "descripcion": "Secador de cabello con motor AC de larga duración y 2200W de potencia. Incluye 2 boquillas concentradoras y difusor para rizar. Su tecnología de iones negativos reduce el encrespamiento y aumenta el brillo del cabello."
   },
   {
     "id": 515,
     "nombre": "Manguera Reforzada Extensible 30m",
-    "precio": 600.00,
+    "precio": 600.0,
     "imagen": "src/assets/images/Catalogo/manguera-extensible.jpg",
     "descripcion": "Manguera de jardín expandible que triplica su longitud con la presión del agua. Fabricada con tejido de poliéster de alta densidad y conectores de latón resistentes a la corrosión. Incluye pistola rociadora con 8 patrones de pulverización."
   },
   {
     "id": 516,
     "nombre": "Jarra Eléctrica de Acero Inoxidable",
-    "precio": 978.00,
+    "precio": 978.0,
     "imagen": "src/assets/images/Catalogo/jarra-electrica.jpg",
     "descripcion": "Hervidor eléctrico de 1.7L con apagado automático y protección contra ebullición en seco. Su elemento calefactor oculto garantiza mayor durabilidad y facilidad de limpieza. Base giratoria 360° con indicador luminoso y filtro antical removible."
   }

@@ -1,132 +1,137 @@
 /* FAQ Page Styles */
 .faq-title {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
+}
+.faq-title::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary-500), transparent);
+  bottom: -10px;
+  left: 25%;
+  border-radius: 2px;
+}
+.faq-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.faq-item {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+.faq-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.faq-item.active {
+  border-left: 4px solid var(--color-primary-600);
+  background-color: #f0f9ff;
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  background: none;
+  transition: background-color 0.3s ease;
+}
+.faq-question:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.faq-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  color: var(--color-primary-600);
+}
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.25rem;
+  transition:
+    max-height 0.5s ease,
+    padding 0.3s ease;
+}
+.faq-item.active .faq-answer {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+}
+/* Animation for new FAQ items */
+/* Animation keyframes first */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .faq-title::after {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-primary-500), transparent);
-    bottom: -10px;
-    left: 25%;
-    border-radius: 2px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .faq-container {
-    max-width: 100%;
-    margin: 0 auto;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.4);
   }
-  .faq-item {
-    background-color: #f9fafb;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border-left: 4px solid transparent;
+  70% {
+    box-shadow: 0 0 0 10px rgba(2, 132, 199, 0);
   }
-  .faq-item:hover {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  100% {
+    box-shadow: 0 0 0 0 rgba(2, 132, 199, 0);
   }
-  .faq-item.active {
-    border-left: 4px solid var(--color-primary-600);
-    background-color: #f0f9ff;
-  }
-  .faq-question {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem;
-    cursor: pointer;
-    text-align: left;
-    border: none;
-    background: none;
-    transition: background-color 0.3s ease;
-  }
-  .faq-question:hover {
-    background-color: rgba(0, 0, 0, 0.02);
-  }
-  .faq-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-    color: var(--color-primary-600);
-  }
-  .faq-item.active .faq-icon {
-    transform: rotate(180deg);
+}
+
+/* Then the rest of your FAQ styles */
+.faq-item-animation {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+.faq-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.faq-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.faq-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.faq-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.faq-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.faq-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.faq-item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+/* Pulse animation for the contact button */
+.btn-primary {
+  animation: pulse 2s infinite;
+}
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .faq-question h3 {
+    font-size: 1rem;
   }
   .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 1.25rem;
-    transition: max-height 0.5s ease, padding 0.3s ease;
+    font-size: 0.9rem;
   }
-  .faq-item.active .faq-answer {
-    padding: 0 1.25rem 1.25rem 1.25rem;
-  }
-  /* Animation for new FAQ items */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .faq-item-animation {
-    animation: fadeIn 0.5s ease forwards;
-    opacity: 0;
-  }
-  .faq-item:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  .faq-item:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  .faq-item:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  .faq-item:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  .faq-item:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-  .faq-item:nth-child(6) {
-    animation-delay: 0.6s;
-  }
-  .faq-item:nth-child(7) {
-    animation-delay: 0.7s;
-  }
-  /* Pulse animation for the contact button */
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.4);
-    }
-    70% {
-      box-shadow: 0 0 0 10px rgba(2, 132, 199, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(2, 132, 199, 0);
-    }
-  }
-  .btn-primary {
-    animation: pulse 2s infinite;
-  }
-  /* Responsive adjustments */
-  @media (max-width: 640px) {
-    .faq-question h3 {
-      font-size: 1rem;
-    }
-    .faq-answer {
-      font-size: 0.9rem;
-    }
-  }
-  
+}

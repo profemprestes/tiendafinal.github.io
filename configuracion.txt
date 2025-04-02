@@ -1,6 +1,6 @@
 # PRECIO HOGAR - CONFIGURATION FILES
 
-Project directory: G:\01-Tienda\certain-corot\tiendafinal
+Project directory: g:\01-Tienda\certain-corot\tiendafinal
 Date: mar. 01/04/2025
 
 ## package.json
@@ -12,26 +12,46 @@ Date: mar. 01/04/2025
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "clean": "rimraf dist .astro",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "deploy": "astro build && gh-pages -d dist",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "analyze": "astro build && astro check && npm run bundle-analyze"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.2",
-    "@astrojs/tailwind": "^5.0.2",
-    "@iconify-json/tabler": "^1.2.17",
+    "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.5.5",
-    "astro-auto-import": "^0.4.4",
-    "astro-icon": "^1.1.5",
+    "astro-i18n": "^2.2.4",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^3.3.5"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.56.0",
+    "eslint-plugin-astro": "^0.31.4",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2",
+    "vite-plugin-static-copy": "^2.3.0"
   }
 }
 
@@ -41,22 +61,33 @@ Date: mar. 01/04/2025
 
 ```
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
+import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(), 
-    react()
-  ],
-  site: 'https://profemprestes.github.io/tiendafinal.github.io',
+  integrations: [tailwind(), react()],
+  site: 'https://preciohogar.com',
   base: '/',
   build: {
-    assets: 'assets',  // Removed the leading slash
-    format: 'file'
-  }
+    assets: '_astro',
+    format: 'directory',
+    inlineStylesheets: 'auto',
+  },
+  compressHTML: true,
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            react: ['react', 'react-dom'],
+            cart: ['./src/components/carritocomponente.astro'],
+          },
+        },
+      },
+    },
+  },
 });
+
 ```
 
 ## tailwind.config.cjs
@@ -64,7 +95,12 @@ export default defineConfig({
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: [
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    './public/**/*.js',
+    './node_modules/@iconify-json/tabler/icons.json',
+  ],
+  darkMode: 'class', // Soporte para modo oscuro: 'media' o 'class'
   theme: {
     extend: {
       colors: {
@@ -79,6 +115,7 @@ module.exports = {
           700: '#0369a1',
           800: '#075985',
           900: '#0c4a6e',
+          950: '#082f49',
         },
         secondary: {
           50: '#f8fafc',
@@ -91,35 +128,116 @@ module.exports = {
           700: '#334155',
           800: '#1e293b',
           900: '#0f172a',
+          950: '#020617',
+        },
+        accent: {
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+          950: '#451a03',
         },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        heading: ['Inter', 'sans-serif'],
+      },
+      screens: {
+        xs: '475px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
+      spacing: {
+        128: '32rem',
+        144: '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.secondary.800'),
+            a: {
+              color: theme('colors.primary.600'),
+              '&:hover': {
+                color: theme('colors.primary.700'),
+              },
+            },
+            h1: {
+              color: theme('colors.secondary.900'),
+            },
+            h2: {
+              color: theme('colors.secondary.900'),
+            },
+            h3: {
+              color: theme('colors.secondary.900'),
+            },
+            h4: {
+              color: theme('colors.secondary.900'),
+            },
+          },
+        },
+      }),
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-in': 'slideIn 0.5s ease-in-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideIn: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
       },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
+
 ```
 
 ## tsconfig.json
 
 ```
 {
-  "extends": "astro/tsconfigs/base",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitAny": true,
     "allowJs": true,
+    "checkJs": false,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@styles/*": ["src/styles/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"],
+      "@pages/*": ["src/pages/*"],
+      "@productos/*": ["src/productos/*"]
     }
   }
 }
-
 
 ```
 

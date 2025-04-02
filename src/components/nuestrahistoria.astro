@@ -2,7 +2,6 @@
 export interface Props {
   message: string;
 }
-const { message } = Astro.props;
 ---
 
 <!-- Nuestra Historia -->
@@ -11,11 +10,14 @@ const { message } = Astro.props;
     <!-- Section Title with Decorative Element -->
     <div class="flex items-center justify-center mb-12">
       <div class="relative">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary-600 relative z-10">Nuestra Historia</h2>
-        <div class="absolute -bottom-3 left-0 w-full h-2 bg-primary-200 opacity-50 rounded-full"></div>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-600 relative z-10">
+          Nuestra Historia
+        </h2>
+        <div class="absolute -bottom-3 left-0 w-full h-2 bg-primary-200 opacity-50 rounded-full">
+        </div>
       </div>
     </div>
-    
+
     <div class="flex flex-col md:flex-row items-center gap-12">
       <!-- Timeline Element (New) -->
       <div class="hidden md:block md:w-1/12">
@@ -27,74 +29,133 @@ const { message } = Astro.props;
           <div class="w-4 h-4 rounded-full bg-primary-300 shadow-lg"></div>
         </div>
       </div>
-      
+
       <!-- Text Content -->
       <div class="md:w-5/12 mb-10 md:mb-0">
         <div class="space-y-6">
           <div class="transform transition-all duration-500 hover:translate-x-2">
             <span class="text-sm font-semibold text-primary-500 block mb-1">2010</span>
             <p class="text-lg text-gray-700">
-              PrecioHogar comenzó como una pequeña tienda familiar en Montevideo. Nuestro fundador, Juan Rodríguez, tenía una visión clara: hacer que la tecnología para el hogar fuera accesible para todos.
+              PrecioHogar comenzó como una pequeña tienda familiar en Montevideo. Nuestro fundador,
+              Juan Rodríguez, tenía una visión clara: hacer que la tecnología para el hogar fuera
+              accesible para todos.
             </p>
           </div>
-          
+
           <div class="transform transition-all duration-500 hover:translate-x-2">
             <span class="text-sm font-semibold text-primary-500 block mb-1">2010 - 2023</span>
             <p class="text-lg text-gray-700">
-              A lo largo de más de una década, hemos crecido hasta convertirnos en uno de los principales proveedores de electrodomésticos y artículos para el hogar en Uruguay, con miles de clientes satisfechos y una reputación sólida en el mercado.
+              A lo largo de más de una década, hemos crecido hasta convertirnos en uno de los
+              principales proveedores de electrodomésticos y artículos para el hogar en Uruguay, con
+              miles de clientes satisfechos y una reputación sólida en el mercado.
             </p>
           </div>
-          
+
           <div class="transform transition-all duration-500 hover:translate-x-2">
             <span class="text-sm font-semibold text-primary-500 block mb-1">Hoy</span>
             <p class="text-lg text-gray-700">
-              Nuestra evolución no solo ha sido en tamaño, sino también en la adopción de nuevas tecnologías y tendencias, siempre manteniendo nuestro compromiso con la calidad y el servicio personalizado que nos caracteriza.
+              Nuestra evolución no solo ha sido en tamaño, sino también en la adopción de nuevas
+              tecnologías y tendencias, siempre manteniendo nuestro compromiso con la calidad y el
+              servicio personalizado que nos caracteriza.
             </p>
           </div>
         </div>
       </div>
-      
+
       <!-- Stats Card -->
       <div class="md:w-6/12">
         <div class="relative">
           <!-- Background Blob -->
-          <svg class="absolute -top-10 -left-10 w-full h-full text-primary-300 opacity-20" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M47.5,-73.3C57.8,-67.6,60.2,-47.5,64.8,-30.2C69.5,-12.9,76.4,1.6,74.1,14.8C71.8,28.1,60.2,39.9,47.3,49.8C34.4,59.7,20.2,67.6,3.9,72.1C-12.5,76.5,-30.9,77.5,-47.1,70.6C-63.2,63.6,-77.1,48.8,-81.4,31.8C-85.7,14.8,-80.5,-4.4,-72.6,-20.7C-64.7,-37,-54.2,-50.4,-41.4,-55.2C-28.6,-60,-14.3,-56.1,2.2,-59.5C18.8,-62.9,37.3,-73.5,47.5,-73.3Z" transform="translate(100 100)" />
+          <svg
+            class="absolute -top-10 -left-10 w-full h-full text-primary-300 opacity-20"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="currentColor"
+              d="M47.5,-73.3C57.8,-67.6,60.2,-47.5,64.8,-30.2C69.5,-12.9,76.4,1.6,74.1,14.8C71.8,28.1,60.2,39.9,47.3,49.8C34.4,59.7,20.2,67.6,3.9,72.1C-12.5,76.5,-30.9,77.5,-47.1,70.6C-63.2,63.6,-77.1,48.8,-81.4,31.8C-85.7,14.8,-80.5,-4.4,-72.6,-20.7C-64.7,-37,-54.2,-50.4,-41.4,-55.2C-28.6,-60,-14.3,-56.1,2.2,-59.5C18.8,-62.9,37.3,-73.5,47.5,-73.3Z"
+              transform="translate(100 100)"></path>
           </svg>
-          
+
           <!-- Card Content -->
-          <div class="relative bg-white p-6 rounded-xl shadow-xl transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+          <div
+            class="relative bg-white p-6 rounded-xl shadow-xl transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+          >
             <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg p-8">
               <!-- Icon with Counter -->
               <div class="flex flex-col items-center justify-center mb-8">
-                <svg class="w-16 h-16 text-primary-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+                <svg
+                  class="w-16 h-16 text-primary-600"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"
+                    fill="currentColor"></path>
                 </svg>
                 <div class="mt-4 text-center">
                   <h3 class="text-3xl font-bold text-primary-600 counter">13</h3>
                   <p class="text-lg font-medium text-primary-500">años de experiencia</p>
                 </div>
               </div>
-              
+
               <!-- Achievement List -->
               <ul class="space-y-4">
-                <li class="flex items-start transform transition-all duration-300 hover:translate-x-1">
+                <li
+                  class="flex items-start transform transition-all duration-300 hover:translate-x-1"
+                >
                   <div class="flex-shrink-0 p-1 bg-primary-200 rounded-full">
-                    <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <svg
+                      class="w-5 h-5 text-primary-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path></svg
+                    >
                   </div>
                   <p class="ml-3 text-gray-700 font-medium">Miles de clientes satisfechos</p>
                 </li>
-                <li class="flex items-start transform transition-all duration-300 hover:translate-x-1">
+                <li
+                  class="flex items-start transform transition-all duration-300 hover:translate-x-1"
+                >
                   <div class="flex-shrink-0 p-1 bg-primary-200 rounded-full">
-                    <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <svg
+                      class="w-5 h-5 text-primary-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path></svg
+                    >
                   </div>
-                  <p class="ml-3 text-gray-700 font-medium">Expertos en electrodomésticos y tecnología</p>
+                  <p class="ml-3 text-gray-700 font-medium">
+                    Expertos en electrodomésticos y tecnología
+                  </p>
                 </li>
-                <li class="flex items-start transform transition-all duration-300 hover:translate-x-1">
+                <li
+                  class="flex items-start transform transition-all duration-300 hover:translate-x-1"
+                >
                   <div class="flex-shrink-0 p-1 bg-primary-200 rounded-full">
-                    <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <svg
+                      class="w-5 h-5 text-primary-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path></svg
+                    >
                   </div>
-                  <p class="ml-3 text-gray-700 font-medium">Garantía y servicio postventa de calidad</p>
+                  <p class="ml-3 text-gray-700 font-medium">
+                    Garantía y servicio postventa de calidad
+                  </p>
                 </li>
               </ul>
             </div>
@@ -108,15 +169,21 @@ const { message } = Astro.props;
 <style>
   /* Animation for counter */
   @keyframes countUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  
+
   .counter {
     animation: countUp 1.5s ease-out forwards;
     position: relative;
   }
-  
+
   .counter::after {
     content: '+';
     position: absolute;
@@ -129,16 +196,19 @@ const { message } = Astro.props;
 <script>
   // Add intersection observer for animations
   document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    
-    document.querySelectorAll('.transform').forEach(el => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    document.querySelectorAll('.transform').forEach((el) => {
       observer.observe(el);
     });
   });

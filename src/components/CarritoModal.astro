@@ -6,11 +6,15 @@
   <div class="flex items-center justify-center min-h-screen p-4">
     <!-- Overlay de fondo oscuro -->
     <div class="fixed inset-0 bg-black opacity-50" id="carritoModalOverlay"></div>
-    
+
     <!-- Contenido del modal -->
-    <div class="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+    <div
+      class="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+    >
       <!-- Encabezado del modal -->
-      <div class="flex items-center justify-between p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+      <div
+        class="flex items-center justify-between p-4 border-b border-gray-200 sticky top-0 bg-white z-10"
+      >
         <h3 class="text-xl font-semibold text-gray-800">
           <i class="fas fa-shopping-cart mr-2 text-primary-600"></i> Tu Carrito
         </h3>
@@ -18,7 +22,7 @@
           <i class="fas fa-times text-xl"></i>
         </button>
       </div>
-      
+
       <!-- Contenido del carrito -->
       <div class="p-4" id="carritoModalContent">
         <!-- Este contenido se llenará dinámicamente con JavaScript -->
@@ -30,11 +34,11 @@
             <i class="fas fa-shopping-bag mr-2"></i> Continuar comprando
           </button>
         </div>
-        
+
         <!-- Lista de productos en el carrito -->
         <div class="cart-items-container">
           <div class="cart-items space-y-4"></div>
-          
+
           <!-- Resumen del carrito -->
           <div class="cart-summary mt-6 pt-4 border-t border-gray-200 hidden">
             <div class="flex justify-between items-center mb-2">
@@ -50,13 +54,22 @@
               <span class="text-xl font-bold text-primary-700" id="modal-total">$0.00</span>
             </div>
             <div class="flex flex-col sm:flex-row gap-3">
-              <button id="vaciarCarritoModal" class="btn-secondary flex-1 flex items-center justify-center text-sm py-2">
+              <button
+                id="vaciarCarritoModal"
+                class="btn-secondary flex-1 flex items-center justify-center text-sm py-2"
+              >
                 <i class="fas fa-trash-alt mr-2"></i> Vaciar carrito
               </button>
-              <a href="/carrito" class="btn-primary flex-1 flex items-center justify-center text-sm py-2">
+              <a
+                href="/carrito"
+                class="btn-primary flex-1 flex items-center justify-center text-sm py-2"
+              >
                 <i class="fas fa-shopping-bag mr-2"></i> Ver carrito completo
               </a>
-              <button id="finalizarCompraModal" class="btn-primary flex-1 flex items-center justify-center text-sm py-2">
+              <button
+                id="finalizarCompraModal"
+                class="btn-primary flex-1 flex items-center justify-center text-sm py-2"
+              >
                 <i class="fas fa-check-circle mr-2"></i> Finalizar compra
               </button>
             </div>
@@ -71,23 +84,46 @@
   #carritoModal {
     transition: opacity 0.3s ease;
   }
-  
+
   #carritoModal.show {
     display: flex;
     animation: fadeIn 0.3s ease forwards;
   }
-  
+
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  
+
   .cart-item-enter {
     animation: slideIn 0.3s ease forwards;
   }
-  
+
   @keyframes slideIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCartModal();
+    document.addEventListener('cartUpdated', updateCartModal);
+  });
+
+  function updateCartModal() {
+    const cart = JSON.parse(localStorage.getItem('carrito') || '[]');
+    // Update modal content here based on cart items
+    // You can reuse the existing cart display logic
+  }
+</script>

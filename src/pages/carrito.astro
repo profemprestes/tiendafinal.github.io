@@ -7,9 +7,12 @@ import Herop from '@components/Herop.astro';
 // Aquí solo definimos la estructura para el SSR inicial
 ---
 
-<LayoutCarrito title="Carrito de Compras | PrecioHogar" description="Revisa los productos en tu carrito de compras y finaliza tu pedido con facilidad en PrecioHogar.">
+<LayoutCarrito
+  title="Carrito de Compras | PrecioHogar"
+  description="Revisa los productos en tu carrito de compras y finaliza tu pedido con facilidad en PrecioHogar."
+>
   <Herop message="Tu Carrito de Compras" />
-  
+
   <section class="py-8">
     <div class="container mx-auto px-4">
       <CarritoComponente />
@@ -20,7 +23,7 @@ import Herop from '@components/Herop.astro';
     document.addEventListener('DOMContentLoaded', () => {
       // Cargar productos del carrito desde localStorage
       const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
-      
+
       // Si hay productos en el carrito, renderizamos el componente con los datos
       if (carrito.length > 0) {
         // Aquí no necesitamos hacer nada especial porque el componente CarritoComponente

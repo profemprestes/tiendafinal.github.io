@@ -11,7 +11,7 @@
   --color-primary-800: #1e40af;
   --color-primary-900: #1e3a8a;
   --color-primary-950: #172554;
-  
+
   /* Enhanced secondary colors with cooler undertones */
   --color-secondary-50: #f0f9ff;
   --color-secondary-100: #e0f2fe;
@@ -24,7 +24,7 @@
   --color-secondary-800: #075985;
   --color-secondary-900: #0c4a6e;
   --color-secondary-950: #082f49;
-  
+
   /* Refined accent colors with better contrast */
   --color-accent-50: #fffbeb;
   --color-accent-100: #fef3c7;
@@ -174,8 +174,14 @@ body {
 
 /* Animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fadeIn {
@@ -184,9 +190,15 @@ body {
 
 /* Adding float animation */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .animate-float {

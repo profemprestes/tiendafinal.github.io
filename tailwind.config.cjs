@@ -1,3 +1,6 @@
+import forms from '@tailwindcss/forms';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import { defineConfig } from 'tailwindcss';
 import typography from '@tailwindcss/typography';
 /** @type {import('tailwindcss').Config} */
 export default {

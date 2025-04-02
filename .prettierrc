@@ -5,13 +5,27 @@
   "trailingComma": "es5",
   "printWidth": 100,
   "bracketSpacing": true,
-  "endOfLine": "auto",
+  "endOfLine": "lf",
   "plugins": ["prettier-plugin-astro"],
   "overrides": [
     {
       "files": "*.astro",
       "options": {
-        "parser": "astro"
+        "parser": "astro",
+        "astroAllowShorthand": false
+      }
+    },
+    {
+      "files": ["*.json", "*.md"],
+      "options": {
+        "tabWidth": 2,
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "arrowParens": "always"
       }
     }
   ]

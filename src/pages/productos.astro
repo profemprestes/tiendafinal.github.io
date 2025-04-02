@@ -181,7 +181,7 @@ const categoryTranslations = {
         // Filter products
         productCards.forEach((card) => {
           if (category === 'all') {
-            card.style.display = 'block';
+(card as HTMLElement).style.display = 'block';
             visibleCount++;
           } else {
             if (card.getAttribute('data-category') === category) {
@@ -320,7 +320,7 @@ const categoryTranslations = {
     const cart = JSON.parse(localStorage.getItem('carrito') || '[]');
     const counter = document.querySelector('.cart-counter');
     if (counter) {
-      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const totalItems = cart.reduce((sum: number, item: { quantity: number }) => sum + item.quantity, 0);
       counter.textContent = totalItems;
       counter.classList.toggle('hidden', totalItems === 0);
     }

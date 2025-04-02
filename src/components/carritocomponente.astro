@@ -152,7 +152,7 @@ const formatPrice = (price: number) => price.toFixed(2);
         }
         document.dispatchEvent(new CustomEvent('cartUpdated'));
       }
-    }
+    },
   };
 
   // Manejadores de eventos para los botones de cantidad
@@ -170,7 +170,7 @@ const formatPrice = (price: number) => price.toFixed(2);
         }
       });
     });
-  });
+  } // <-- This was missing
 
   document.querySelectorAll('.increase-quantity').forEach((button) => {
     button.addEventListener('click', () => {

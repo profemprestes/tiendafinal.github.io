@@ -43,7 +43,7 @@ const {
         const cart = JSON.parse(localStorage.getItem('carrito') || '[]');
         const counters = document.querySelectorAll('.cart-counter');
         counters.forEach((counter) => {
-          const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+          const totalItems = cart.reduce((sum: number, item: { quantity?: number }) => sum + (item.quantity || 0), 0);
           counter.textContent = totalItems;
           counter.classList.toggle('hidden', totalItems === 0);
         });

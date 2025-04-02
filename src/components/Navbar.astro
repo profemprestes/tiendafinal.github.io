@@ -46,7 +46,7 @@ import Logo from '../assets/logotienda.svg';
       >
         <i class="fas fa-shopping-cart"></i>
         <span
-          class="cart-counter hidden absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+          class="cart-counter absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
           >0</span
         >
       </button>
@@ -102,7 +102,7 @@ import Logo from '../assets/logotienda.svg';
       >
         <i class="fas fa-shopping-cart"></i>
         <span
-          class="cart-counter hidden absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+          class="cart-counter absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 items-center justify-center"
           >0</span
         >
       </button>
@@ -123,7 +123,10 @@ import Logo from '../assets/logotienda.svg';
     const cart = JSON.parse(localStorage.getItem('carrito') || '[]');
     const counters = document.querySelectorAll('.cart-counter');
     counters.forEach((counter) => {
-      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const totalItems = cart.reduce(
+        (sum: number, item: { quantity: number }) => sum + item.quantity,
+        0
+      );
       counter.textContent = totalItems;
       counter.classList.toggle('hidden', totalItems === 0);
     });

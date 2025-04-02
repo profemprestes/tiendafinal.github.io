@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import autoImport from 'astro-auto-import';
-// Remove unused import
+import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://preciohogar.com',
@@ -10,6 +10,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     react(),
+    vercel(),
     autoImport({
       imports: ['astro:content', 'astro:assets'], // Importaciones automáticas
       components: true, // Auto-importar componentes

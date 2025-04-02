@@ -1,8 +1,13 @@
+import forms from '@tailwindcss/forms';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import { defineConfig } from 'tailwindcss';
+import typography from '@tailwindcss/typography';
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-    './public/**/*.js'
+    './public/**/*.js',
+    './node_modules/@iconify-json/tabler/icons.json',
   ],
   darkMode: 'class', // Soporte para modo oscuro: 'media' o 'class'
   theme: {
@@ -53,16 +58,16 @@ module.exports = {
         heading: ['Inter', 'sans-serif'],
       },
       screens: {
-        'xs': '475px',
-        'sm': '640px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
+        xs: '475px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
         '2xl': '1536px',
       },
       spacing: {
-        '128': '32rem',
-        '144': '36rem',
+        128: '32rem',
+        144: '36rem',
       },
       borderRadius: {
         '4xl': '2rem',
@@ -113,4 +118,4 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
   ],
-}
+};

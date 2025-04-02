@@ -2,49 +2,60 @@
 import Layout from '../layouts/Layout.astro';
 import Heroi from '../components/Heroi.astro';
 import Categoriasdestacadas from '../components/Categoriasdestacadas.astro';
-import '../styles/tailwind.css'; // Import Tailwind styles
+// Eliminamos esta línea: import tailwindcss from '@tailwindcss/vite';
 ---
 
-<Layout title="PrecioHogar - Electrodomésticos y artículos para el hogar" description="PrecioHogar es tu tienda online de electrodomésticos y artículos para el hogar con los mejores precios y facilidades de pago.">
+<Layout
+  title="PrecioHogar - Electrodomésticos y artículos para el hogar"
+  description="PrecioHogar es tu tienda online de electrodomésticos y artículos para el hogar con los mejores precios y facilidades de pago."
+>
   <main>
     <Heroi message="Bienvenido a PrecioHogar" />
     <!-- Categories Section -->
-<Categoriasdestacadas message="Featured Categories" />
+    <Categoriasdestacadas message="Featured Categories" />
     <!-- End Categories Section -->
-    
-  
 
     <!-- Benefits Section -->
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-primary-600">¿Por qué elegirnos?</h2>
-          <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Descubre las ventajas de comprar en PrecioHogar</p>
+          <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+            Descubre las ventajas de comprar en PrecioHogar
+          </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="text-center">
-            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div
+              class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
               <i class="fas fa-truck text-2xl text-primary-600"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2 text-gray-800">Envío Gratuito</h3>
             <p class="text-gray-600">En todas las compras superiores a $299</p>
           </div>
           <div class="text-center">
-            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div
+              class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
               <i class="fas fa-shield-alt text-2xl text-primary-600"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2 text-gray-800">Garantía Extendida</h3>
             <p class="text-gray-600">Protección adicional en todos nuestros productos</p>
           </div>
           <div class="text-center">
-            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div
+              class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
               <i class="fas fa-credit-card text-2xl text-primary-600"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2 text-gray-800">Pago Seguro</h3>
             <p class="text-gray-600">Múltiples métodos de pago y proceso seguro</p>
           </div>
           <div class="text-center">
-            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div
+              class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
               <i class="fas fa-headset text-2xl text-primary-600"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2 text-gray-800">Soporte 24/7</h3>
@@ -59,14 +70,27 @@ import '../styles/tailwind.css'; // Import Tailwind styles
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center">
           <h2 class="text-3xl font-bold mb-6">Mantente informado</h2>
-          <p class="text-lg mb-8 opacity-90">Suscríbete a nuestro newsletter y recibe las mejores ofertas y novedades directamente en tu correo</p>
+          <p class="text-lg mb-8 opacity-90">
+            Suscríbete a nuestro newsletter y recibe las mejores ofertas y novedades directamente en
+            tu correo
+          </p>
           <form class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <input type="email" placeholder="Tu correo electrónico" class="form-input rounded-md flex-1 text-gray-800" required>
-            <button type="submit" class="bg-white text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-md font-medium transition duration-300">
+            <input
+              type="email"
+              placeholder="Tu correo electrónico"
+              class="form-input rounded-md flex-1 text-gray-800"
+              required
+            />
+            <button
+              type="submit"
+              class="bg-white text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-md font-medium transition duration-300"
+            >
               Suscribirme
             </button>
           </form>
-          <p class="text-sm mt-4 opacity-80">Al suscribirse, aceptas nuestra política de privacidad y términos de servicio.</p>
+          <p class="text-sm mt-4 opacity-80">
+            Al suscribirse, aceptas nuestra política de privacidad y términos de servicio.
+          </p>
         </div>
       </div>
     </section>

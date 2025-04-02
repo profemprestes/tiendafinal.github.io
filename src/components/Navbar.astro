@@ -9,51 +9,102 @@ import Logo from '../assets/logotienda.svg';
       <a href="/" class="flex items-center">
         <Image src={Logo} alt="PrecioHogar Logo" width={50} height={50} class="mr-2" />
         <span class="text-xl font-bold text-primary-600">PrecioHogar</span>
-</a>
+      </a>
     </div>
-    
+
     <button @click="isOpen = !isOpen" class="md:hidden focus:outline-none">
       <svg class="h-6 w-6 fill-current text-primary-600" viewBox="0 0 24 24">
-        <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16v2H4V5zm0 6h16v2H4v-2zm0 6h16v2H4v-2z"></path>
-        <path x-show="isOpen" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+        <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16v2H4V5zm0 6h16v2H4v-2zm0 6h16v2H4v-2z"
+        ></path>
+        <path
+          x-show="isOpen"
+          fill-rule="evenodd"
+          d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+        ></path>
       </svg>
     </button>
-    
+
     <div class="hidden md:flex space-x-8">
       <a href="/" class="text-gray-600 hover:text-primary-600 transition duration-300">Inicio</a>
-      <a href="/productos" class="text-gray-600 hover:text-primary-600 transition duration-300">Productos</a>
-      <a href="/nosotros" class="text-gray-600 hover:text-primary-600 transition duration-300">Nosotros</a>
-      <a href="/faq" class="text-gray-600 hover:text-primary-600 transition duration-300">Preguntas Frecuentes</a>
-      <a href="/contacto" class="text-gray-600 hover:text-primary-600 transition duration-300">Contacto</a>
+      <a href="/productos" class="text-gray-600 hover:text-primary-600 transition duration-300"
+        >Productos</a
+      >
+      <a href="/nosotros" class="text-gray-600 hover:text-primary-600 transition duration-300"
+        >Nosotros</a
+      >
+      <a href="/faq" class="text-gray-600 hover:text-primary-600 transition duration-300"
+        >Preguntas Frecuentes</a
+      >
+      <a href="/contacto" class="text-gray-600 hover:text-primary-600 transition duration-300"
+        >Contacto</a
+      >
     </div>
-    
+
     <div class="hidden md:flex items-center space-x-4">
-      <button class="cart-button text-gray-600 hover:text-primary-600 transition duration-300 relative">
+      <button
+        class="cart-button text-gray-600 hover:text-primary-600 transition duration-300 relative"
+      >
         <i class="fas fa-shopping-cart"></i>
-        <span class="cart-counter hidden absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+        <span
+          class="cart-counter absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+          >0</span
+        >
       </button>
       <a href="/cuenta" class="text-gray-600 hover:text-primary-600 transition duration-300">
         <i class="fas fa-user"></i>
       </a>
     </div>
   </div>
-  
-  <div x-show="isOpen" x-transition:enter="transition ease-out duration-200" 
-     x-transition:enter-start="opacity-0 scale-95" 
-     x-transition:enter-end="opacity-100 scale-100" 
-     x-transition:leave="transition ease-in duration-150" 
-     x-transition:leave-start="opacity-100 scale-100" 
-     x-transition:leave-end="opacity-0 scale-95"
-     class="absolute top-full left-0 right-0 bg-white shadow-md md:hidden flex flex-col items-center py-4 space-y-4 z-50">
-    <a href="/" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Inicio</a>
-    <a href="/productos" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Productos</a>
-    <a href="/nosotros" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Nosotros</a>
-    <a href="/faq" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Preguntas Frecuentes</a>
-    <a href="/contacto" @click="isOpen = false" class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center">Contacto</a>
+
+  <div
+    x-show="isOpen"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0 scale-95"
+    x-transition:enter-end="opacity-100 scale-100"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100 scale-100"
+    x-transition:leave-end="opacity-0 scale-95"
+    class="absolute top-full left-0 right-0 bg-white shadow-md md:hidden flex flex-col items-center py-4 space-y-4 z-50"
+  >
+    <a
+      href="/"
+      @click="isOpen = false"
+      class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center"
+      >Inicio</a
+    >
+    <a
+      href="/productos"
+      @click="isOpen = false"
+      class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center"
+      >Productos</a
+    >
+    <a
+      href="/nosotros"
+      @click="isOpen = false"
+      class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center"
+      >Nosotros</a
+    >
+    <a
+      href="/faq"
+      @click="isOpen = false"
+      class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center"
+      >Preguntas Frecuentes</a
+    >
+    <a
+      href="/contacto"
+      @click="isOpen = false"
+      class="text-gray-600 hover:text-primary-600 transition duration-300 px-4 py-2 w-full text-center"
+      >Contacto</a
+    >
     <div class="flex space-x-4 mt-2 px-4 py-2 w-full justify-center">
-      <button class="cart-button text-gray-600 hover:text-primary-600 transition duration-300 relative">
+      <button
+        class="cart-button text-gray-600 hover:text-primary-600 transition duration-300 relative"
+      >
         <i class="fas fa-shopping-cart"></i>
-        <span class="cart-counter hidden absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+        <span
+          class="cart-counter absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full w-5 h-5 items-center justify-center"
+          >0</span
+        >
       </button>
       <a href="/cuenta" class="text-gray-600 hover:text-primary-600 transition duration-300">
         <i class="fas fa-user"></i>
@@ -61,3 +112,23 @@ import Logo from '../assets/logotienda.svg';
     </div>
   </div>
 </nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCartCounter();
+    document.addEventListener('cartUpdated', updateCartCounter);
+  });
+
+  function updateCartCounter() {
+    const cart = JSON.parse(localStorage.getItem('carrito') || '[]');
+    const counters = document.querySelectorAll('.cart-counter');
+    counters.forEach((counter) => {
+      const totalItems = cart.reduce(
+        (sum: number, item: { quantity: number }) => sum + item.quantity,
+        0
+      );
+      counter.textContent = totalItems;
+      counter.classList.toggle('hidden', totalItems === 0);
+    });
+  }
+</script>

@@ -2,32 +2,45 @@
 import LayoutFaq from '../layouts/LayoutFaq.astro';
 import Herof from '../components/Herof.astro';
 import '../styles/faq.css';
-
 ---
 
-<LayoutFaq title="Preguntas Frecuentes | PrecioHogar" description="Nuestras respuestas a las preguntas más frecuentes sobre productos, envíos, pagos y más.">
+<LayoutFaq
+  title="Preguntas Frecuentes | PrecioHogar"
+  description="Nuestras respuestas a las preguntas más frecuentes sobre productos, envíos, pagos y más."
+>
   <main>
     <Herof message="Preguntas Frecuentes" />
-    
+
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4 max-w-4xl">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-primary-600 faq-title">¿Cómo podemos ayudarte?</h2>
-          <p class="text-gray-600 mt-4">Encuentra respuestas a las preguntas más comunes sobre nuestros productos y servicios</p>
+          <p class="text-gray-600 mt-4">
+            Encuentra respuestas a las preguntas más comunes sobre nuestros productos y servicios
+          </p>
         </div>
-        
+
         <div class="space-y-6 faq-container">
           <!-- FAQ Item 1 -->
           <div class="faq-item">
             <button class="faq-question">
-              <h3 class="text-xl font-semibold text-primary-700"> ¿Cómo puedo realizar un pedido?</h3>
+              <h3 class="text-xl font-semibold text-primary-700">
+                ¿Cómo puedo realizar un pedido?
+              </h3>
               <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer">
               <p class="text-gray-700">Puedes realizar tu pedido de dos formas sencillas:</p>
               <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-700">
-                <li><strong>A través de nuestra web:</strong> Navega por nuestras categorías, añade productos al carrito, completa tus datos de envío y selecciona tu método de pago preferido.</li>
-                <li><strong>Por WhatsApp:</strong> Escríbenos al <a href="https://wa.me/59892315819" class="text-primary-600 hover:underline">+598 92 315 819</a> con el siguiente formato:
+                <li>
+                  <strong>A través de nuestra web:</strong> Navega por nuestras categorías, añade productos
+                  al carrito, completa tus datos de envío y selecciona tu método de pago preferido.
+                </li>
+                <li>
+                  <strong>Por WhatsApp:</strong> Escríbenos al <a
+                    href="https://wa.me/59892315819"
+                    class="text-primary-600 hover:underline">+598 92 315 819</a
+                  > con el siguiente formato:
                   <div class="bg-gray-100 p-3 rounded mt-2 text-sm">
                     <p>Hola PrecioHogar, me interesa comprar:</p>
                     <p>- Producto: [nombre del producto]</p>
@@ -39,30 +52,41 @@ import '../styles/faq.css';
               </ul>
             </div>
           </div>
-          
+
           <!-- FAQ Item 2 -->
           <div class="faq-item">
             <button class="faq-question">
-              <h3 class="text-xl font-semibold text-primary-700"> ¿Cómo se procesan los envíos?</h3>
+              <h3 class="text-xl font-semibold text-primary-700">¿Cómo se procesan los envíos?</h3>
               <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer">
               <p class="text-gray-700">El procesamiento de tu pedido varía según tu ubicación:</p>
               <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-700">
-                <li><strong>Pedidos dentro de Montevideo:</strong> Realizamos entrega a domicilio con opción de pago contra entrega en efectivo o con tarjeta mediante POS móvil.</li>
-                <li><strong>Pedidos al interior:</strong> Enviamos por DAC o Correo Uruguayo. Para estos casos, solicitamos el pago por transferencia bancaria antes del despacho para garantizar la seguridad de la transacción.</li>
+                <li>
+                  <strong>Pedidos dentro de Montevideo:</strong> Realizamos entrega a domicilio con opción
+                  de pago contra entrega en efectivo o con tarjeta mediante POS móvil.
+                </li>
+                <li>
+                  <strong>Pedidos al interior:</strong> Enviamos por DAC o Correo Uruguayo. Para estos
+                  casos, solicitamos el pago por transferencia bancaria antes del despacho para garantizar
+                  la seguridad de la transacción.
+                </li>
               </ul>
             </div>
           </div>
-          
+
           <!-- FAQ Item 3 -->
           <div class="faq-item">
             <button class="faq-question">
-              <h3 class="text-xl font-semibold text-primary-700"> ¿Cuáles son las opciones de envío?</h3>
+              <h3 class="text-xl font-semibold text-primary-700">
+                ¿Cuáles son las opciones de envío?
+              </h3>
               <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer">
-              <p class="text-gray-700">Contamos con dos opciones principales para envíos al interior:</p>
+              <p class="text-gray-700">
+                Contamos con dos opciones principales para envíos al interior:
+              </p>
               <ul class="list-disc pl-5 mt-2 space-y-3 text-gray-700">
                 <li>
                   <strong>DAC (Delivery):</strong>
@@ -83,78 +107,119 @@ import '../styles/faq.css';
               </ul>
             </div>
           </div>
-          
+
           <!-- FAQ Item 4 -->
           <div class="faq-item">
             <button class="faq-question">
-              <h3 class="text-xl font-semibold text-primary-700"> ¿Qué hago si mi pedido llega dañado?</h3>
+              <h3 class="text-xl font-semibold text-primary-700">
+                ¿Qué hago si mi pedido llega dañado?
+              </h3>
               <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer">
               <p class="text-gray-700">Si tu producto llega con algún daño, sigue estos pasos:</p>
               <ol class="list-decimal pl-5 mt-2 space-y-2 text-gray-700">
                 <li>Toma fotografías del embalaje y del producto dañado.</li>
-                <li>Contáctanos dentro de las 24 horas siguientes a la recepción a través de WhatsApp al <a href="https://wa.me/59892315819" class="text-primary-600 hover:underline">+598 92 315 819</a> o mediante nuestro <a href="/contacto" class="text-primary-600 hover:underline">formulario de contacto</a>.</li>
-                <li>Nuestro equipo evaluará el caso y te ofrecerá una solución: reemplazo del producto, reparación o reembolso según corresponda.</li>
+                <li>
+                  Contáctanos dentro de las 24 horas siguientes a la recepción a través de WhatsApp
+                  al <a href="https://wa.me/59892315819" class="text-primary-600 hover:underline"
+                    >+598 92 315 819</a
+                  > o mediante nuestro <a href="/contacto" class="text-primary-600 hover:underline"
+                    >formulario de contacto</a
+                  >.
+                </li>
+                <li>
+                  Nuestro equipo evaluará el caso y te ofrecerá una solución: reemplazo del
+                  producto, reparación o reembolso según corresponda.
+                </li>
               </ol>
             </div>
           </div>
-          
+
           <!-- FAQ Item 5 -->
           <div class="faq-item">
             <button class="faq-question">
-              <h3 class="text-xl font-semibold text-primary-700"> ¿Puedo cancelar o modificar mi pedido después de confirmarlo?</h3>
+              <h3 class="text-xl font-semibold text-primary-700">
+                ¿Puedo cancelar o modificar mi pedido después de confirmarlo?
+              </h3>
               <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer">
               <p class="text-gray-700">Sí, pero con algunas condiciones:</p>
               <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-700">
-                <li><strong>Cancelaciones:</strong> Puedes cancelar tu pedido sin costo dentro de las primeras 2 horas después de realizarlo. Pasado este tiempo, si el pedido ya está en proceso de preparación, podría aplicarse un cargo administrativo del 5%.</li>
-                <li><strong>Modificaciones:</strong> Para cambios en tu pedido (dirección, productos, cantidades), contáctanos lo antes posible por WhatsApp o teléfono. Las modificaciones están sujetas a disponibilidad y estado del procesamiento.</li>
+                <li>
+                  <strong>Cancelaciones:</strong> Puedes cancelar tu pedido sin costo dentro de las primeras
+                  2 horas después de realizarlo. Pasado este tiempo, si el pedido ya está en proceso
+                  de preparación, podría aplicarse un cargo administrativo del 5%.
+                </li>
+                <li>
+                  <strong>Modificaciones:</strong> Para cambios en tu pedido (dirección, productos, cantidades),
+                  contáctanos lo antes posible por WhatsApp o teléfono. Las modificaciones están sujetas
+                  a disponibilidad y estado del procesamiento.
+                </li>
               </ul>
             </div>
           </div>
-          
+
           <!-- FAQ Item 6 -->
           <div class="faq-item">
             <button class="faq-question">
-              <h3 class="text-xl font-semibold text-primary-700"> ¿Cómo rastreo mi envío?</h3>
+              <h3 class="text-xl font-semibold text-primary-700">¿Cómo rastreo mi envío?</h3>
               <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer">
-              <p class="text-gray-700">Una vez que tu pedido sea despachado, recibirás por email y/o WhatsApp:</p>
+              <p class="text-gray-700">
+                Una vez que tu pedido sea despachado, recibirás por email y/o WhatsApp:
+              </p>
               <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-700">
                 <li>Un código de seguimiento único</li>
-                <li>El enlace directo a la plataforma de seguimiento del transportista (DAC o Correo Uruguayo)</li>
+                <li>
+                  El enlace directo a la plataforma de seguimiento del transportista (DAC o Correo
+                  Uruguayo)
+                </li>
                 <li>Instrucciones para consultar el estado de tu envío</li>
               </ul>
-              <p class="mt-2 text-gray-700">También puedes consultar el estado de tu pedido iniciando sesión en tu cuenta de PrecioHogar o contactándonos directamente por WhatsApp.</p>
+              <p class="mt-2 text-gray-700">
+                También puedes consultar el estado de tu pedido iniciando sesión en tu cuenta de
+                PrecioHogar o contactándonos directamente por WhatsApp.
+              </p>
             </div>
           </div>
-          
+
           <!-- FAQ Item 7 (New) -->
           <div class="faq-item">
             <button class="faq-question">
-              <h3 class="text-xl font-semibold text-primary-700"> ¿Hay descuentos para compras mayoristas?</h3>
+              <h3 class="text-xl font-semibold text-primary-700">
+                ¿Hay descuentos para compras mayoristas?
+              </h3>
               <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer">
-              <p class="text-gray-700">¡Sí! Ofrecemos descuentos especiales para compras mayoristas:</p>
+              <p class="text-gray-700">
+                ¡Sí! Ofrecemos descuentos especiales para compras mayoristas:
+              </p>
               <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-700">
                 <li>5% de descuento en compras superiores a $5,000</li>
                 <li>10% de descuento en compras superiores a $10,000</li>
                 <li>15% de descuento en compras superiores a $20,000</li>
               </ul>
-              <p class="mt-2 text-gray-700">Para pedidos mayoristas personalizados o cotizaciones especiales, contáctanos por WhatsApp al <a href="https://wa.me/59892315819" class="text-primary-600 hover:underline">+598 92 315 819</a> o escríbenos a <a href="mailto:ventas@preciohogar.com.uy" class="text-primary-600 hover:underline">ventas@preciohogar.com.uy</a></p>
+              <p class="mt-2 text-gray-700">
+                Para pedidos mayoristas personalizados o cotizaciones especiales, contáctanos por
+                WhatsApp al <a
+                  href="https://wa.me/59892315819"
+                  class="text-primary-600 hover:underline">+598 92 315 819</a
+                > o escríbenos a <a
+                  href="mailto:ventas@preciohogar.com.uy"
+                  class="text-primary-600 hover:underline">ventas@preciohogar.com.uy</a
+                >
+              </p>
             </div>
           </div>
         </div>
-        
+
         <div class="mt-12 text-center">
           <p class="text-gray-700 mb-4">¿No encontraste la respuesta que buscabas?</p>
-          <a href="/contacto" class="btn-primary inline-block">
-            Contáctanos
-          </a>
+          <a href="/contacto" class="btn-primary inline-block"> Contáctanos </a>
         </div>
       </div>
     </section>
@@ -164,46 +229,46 @@ import '../styles/faq.css';
     // Add accordion functionality
     document.addEventListener('DOMContentLoaded', () => {
       const faqItems = document.querySelectorAll('.faq-item');
-      
+
       // Open the first FAQ item by default
       const firstItem = faqItems[0];
       if (firstItem) {
         firstItem.classList.add('active');
         const firstAnswer = firstItem.querySelector('.faq-answer');
         if (firstAnswer) {
-          (firstAnswer as HTMLElement).style.maxHeight = `${firstAnswer.scrollHeight}px`;
+          firstAnswer.style.maxHeight = `${firstAnswer.scrollHeight}px`;
         }
       }
-      
-      faqItems.forEach(item => {
+
+      faqItems.forEach((item) => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
-        
+
         question?.addEventListener('click', () => {
           const isActive = item.classList.contains('active');
-          
+
           // Close all items
-          faqItems.forEach(otherItem => {
+          faqItems.forEach((otherItem) => {
             if (otherItem !== item) {
               otherItem.classList.remove('active');
               const otherAnswer = otherItem.querySelector('.faq-answer');
               if (otherAnswer) {
-(otherAnswer as HTMLElement).style.maxHeight = '0px';
+                (otherAnswer as HTMLElement).style.maxHeight = '0px';
               }
             }
           });
-          
+
           // Toggle current item
           if (isActive) {
             item.classList.remove('active');
-if (answer) {
-(answer as HTMLElement).style.maxHeight = '0px';
-}
+            if (answer) {
+              (answer as HTMLElement).style.maxHeight = '0px';
+            }
           } else {
             item.classList.add('active');
-if (answer) {
-(answer as HTMLElement).style.maxHeight = `${answer.scrollHeight}px`;
-}
+            if (answer) {
+              (answer as HTMLElement).style.maxHeight = `${answer.scrollHeight}px`;
+            }
           }
         });
       });

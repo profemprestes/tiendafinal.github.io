@@ -1,28 +1,37 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
+import autoImport from 'astro-auto-import';
+import vercel from '@astrojs/vercel';
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(), 
-    react()
-  ],
-
-  site: 'https://profemprestes.github.io/tiendafinal.github.io',
+  site: 'https://preciohogar.com',
   base: '/',
-
+  integrations: [
+    tailwind(),
+    react(),
+    vercel(),
+    autoImport({
+      imports: ['astro:content', 'astro:assets'], // Importaciones automáticas
+      components: true, // Auto-importar componentes
+    }),
+  ],
   build: {
-    assets: '_astro',  // Cambiado a _astro para mejor compatibilidad con gh-pages
-    format: 'directory', // Cambiado a directory para mejor rendimiento y SEO
-    assetsPrefix: '/', // Asegura que las URLs de assets sean absolutas
-    inlineStylesheets: 'auto' // Optimiza la carga de estilos
+    assets: '_astro',
+    format: 'directory',
+    inlineStylesheets: 'auto',
   },
-
-  // Mejora el rendimiento comprimiendo HTML
   compressHTML: true,
-
   vite: {
-    plugins: []
-  }
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            react: ['react', 'react-dom'],
+            cart: ['./src/components/carritocomponente.astro'],
+          },
+        },
+      },
+    },
+  },
 });
